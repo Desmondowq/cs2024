@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+#nav{
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color:#ffffff;
+    z-index: 999;
+}
+video{
+    height: 100%;
+    width: 100%;
+}
+.float-left{
+    float: left;
+    margin: 0 0 0 20px;
+}
+
+.float-right{
+    float: right;
+    margin: 0 20px 0 0;
+}
+#header, #intro, #second{
+    width: 100%;
+}
+
+#intro{
+    color: white;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#second{
+    background: url(../images/V3.3.jpg) 50% 0 no-repeat fixed;
+    color: black;
+    height: 1300px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+}
+
+#third{
+    color: white;
+    height: 1300px;
+    padding: 100px 0 0 0;
+}
+
+.story{
+    margin: 0 auto;
+    min-width: 980px;
+    overflow: auto;
+    width: 980px;
+}
+
+.story .float-left, .story .float-right{
+    padding: 100px 0 0 0;
+    position: relative;
+    width: 350px;
+}

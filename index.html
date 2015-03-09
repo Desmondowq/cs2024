@@ -2,9 +2,56 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>AirBud</title>
+    <!--CSS-->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet" />-->
+    <!--<link href="css/bootstrap-theme.min.css" rel="stylesheet" />-->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!--End CSS-->
+    <!--script-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="scripts/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="scripts/jquery.nicescroll.js"></script>
+    <!--<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>-->
+    <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+    <!--end script-->
+    <script>
+        $(document).ready(function(){
+            $('#intro').parallax("50%", 0.1);
+            $('#second').parallax("50%", 0.1);
+            $('.bg').parallax("50%", 0.4);
+            $('#third').parallax("50%", 0.3);
+        })
+    </script>
 </head>
 <body>
-    Test
+    <div id="nav">
+        <div id="logo"><a href="#"><img src="images/AB-Logo-v2.png"/></a></div>
+    </div>
+    <div id="intro">
+        <center>
+            <video preload autoplay>
+                <source src="videos/Black_glowing.mp4">
+                Your browser doesn't support the video tag.
+            </video>
+        </center>
+    </div>
+    <div id="second">
+        <div class="story">
+
+        </div> <!--.story-->
+    </div> <!--#second-->
+    <div id="third">
+        <center>
+            <video preload autoplay>
+                <source src="videos/fit_in.mp4">
+                Your browser doesn't support the video tag.
+            </video>
+        </center>
+        <div class="story">
+        </div> <!--.story-->
+    </div> <!--#third-->
+
 </body>
 </html>
