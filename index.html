@@ -12,45 +12,59 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!--<script type="text/javascript" src="scripts/bootstrap.min.js"></script>-->
     <script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
-    <script type="text/javascript" src="scripts/jquery.nicescroll.js"></script>
+    <!--<script type="text/javascript" src="scripts/jquery.nicescroll.js"></script>-->
     <!--<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>-->
     <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
+    <script type="text/javascript" src="scripts/custom.js"></script>
     <!--end script-->
     <script>
         $(document).ready(function(){
             $('#intro').parallax("50%", 0.1);
             $('#second').parallax("50%", 0.1);
-            $('.bg').parallax("50%", 0.4);
-            $('#third').parallax("50%", 0.3);
+            $('#third').parallax("50%", 0.1);
+            parallaxContainer();
         })
     </script>
 </head>
 <body>
-    <div id="nav">
-        <div id="logo"><a href="#"><img src="images/AB-Logo-v2.png"/></a></div>
-    </div>
-    <div id="intro">
-        <center>
-            <video preload autoplay>
-                <source src="videos/Black_glowing.mp4">
-                Your browser doesn't support the video tag.
-            </video>
-        </center>
-    </div>
-    <div id="second">
+    <div id="navbar-fixed">
+        <nav>
+            <div id="logo"><a href="#"><img src="images/AB-Logo.png"/></a></div>
+            <div id="nav">
+                <ul id="nav-list">
+                    <li>Airbud</li>
+                    <li>Buy Now</li>
+                    <li>Contact Us</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+        </nav>
+    </div><!--End nav -->
+    <div id="intro" class="parallax_field">
+        <video preload autoplay>
+            <source src="videos/Black_glowing.mp4">
+            Your browser doesn't support the video tag.
+
+        </video>
+        <div class="intro_video_context">
+            <center><img src="images/AB-Logo-white.png"/></center>
+            <center><p id="slogon">Listen to music with style</p></center>
+            <br/>
+            <center><span id="buynow">Buy Now</span></center>
+        </div>
+    </div><!--end Intro-->
+    <div id="second" class="parallax_field">
         <div class="story">
 
-        </div> <!--.story-->
+        </div> <!--end .story-->
     </div> <!--#second-->
-    <div id="third">
-        <center>
-            <video preload autoplay>
-                <source src="videos/fit_in.mp4">
-                Your browser doesn't support the video tag.
-            </video>
-        </center>
+    <div id="third" class="parallax_field">
+        <video preload autoplay>
+            <source src="videos/fit_in.mp4">
+            Your browser doesn't support the video tag.
+        </video>
         <div class="story">
-        </div> <!--.story-->
+        </div> <!--end .story-->
     </div> <!--#third-->
 
 </body>
