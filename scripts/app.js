@@ -19,9 +19,9 @@
         this.rgba = rgba
         this.toString = function(){ return "rgba("+Array.prototype.join.call(this.rgba,',')+")" };
     }
-    $.Event.prototype.rgba=function(){console.log($('#app-picker').offset().left);console.log(" "+ $('#app-picker').offset().top);
-        var x =  parseInt($('#app-picker').offset().left),
-            y =  parseInt($('#app-picker').offset().top),
+    $.Event.prototype.rgba=function(){
+        var x =  parseInt($('#app-picker').offset().left - $(this.target).offset().left),
+            y =  parseInt($('#app-picker').offset().top - $(this.target).offset().top),
             nodeName = this.target.nodeName;
         /*var x =  $('#app-picker').offset().left || ($('#app-picker').pageX - $(this.target).offset().left), //was this.offsetX instead of $('#app-picker').offset().left
             y =  $('#app-picker').offset().top || ($('#app-picker').pageY - $(this.target).offset().top), //was this.offsetY*/
@@ -71,8 +71,8 @@ $(function() {
         });
         if(currentHue!=newHue)
             setTimeout(animateHue, 5);
-        console.log("Current Hue:"+currentHue);
-        console.log("New Hue:"+newHue);
+        /*console.log("Current Hue:"+currentHue);
+        console.log("New Hue:"+newHue);*/
     }
 });
 
