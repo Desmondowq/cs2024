@@ -93,3 +93,35 @@ video{
     padding: 5px;
     border-radius: 0.2em;
 }
+#app-container{
+    display:inline-block;
+    width:400px;
+    position:relative;
+}
+#app{
+    width:400px;
+}
+#app-img{
+    width:1000px;
+}
+#app-picker{
+    width:17px;
+    height:17px;
+    position:absolute;
+    cursor:-webkit-grab;
+    left:50%;
+    top: 44%;
+    background: url(../images/picker.png);
+
+    -moz-transform:rotate(45deg);
+    -moz-transform-origin:0px 93px;
+
+    transform:rotate(45deg);
+    transform-origin:0px 93px;
+
+    -ms-transform:rotate(45deg);
+    -ms-transform-origin:0px 93px;
+
+    -webkit-transform:rotate(45deg);
+    -webkit-transform-origin: 0px 93px;
+}
