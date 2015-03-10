@@ -8,9 +8,9 @@ function parallaxContainer(){
     }
     var parallaxHeight = Math.round(bodyWidth * 0.5625);
     //console.log(parallaxHeight);
-    $('.parallax_field').css('height',parallaxHeight+"px");
+    //$('.parallax_field').css('height',parallaxHeight+"px");
     //if(parallaxHeight > 432){
-    $('.intro_video_context').css('top',(parallaxHeight/21.36)+'%');
+    //$('.intro_video_context').css('top',(parallaxHeight/21.36)+'%');
     //}else{
     //    $('.intro_video_context').css('top','20%');
     //}
