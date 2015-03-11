@@ -1,133 +1,81 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-html,body{
+*{padding: 0; margin: 0;}
+html,body{height: 100%;width: 100%;min-height: 100%}
+section{width: 100%;height: 100%;}
+.bg{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     height: 100%;
-    /*overflow-x: hidden;*/
-    /*min-width: 768px;*/
-}
-#navbar-fixed{
-    height: 70px;
     width: 100%;
+}
+/*#slide-1 .bg{background-image:url('../images/V4.2.jpg')}*/
+#slide-2 .bg{background-image:url('../images/V3.3.jpg')}
+#slide-3 .bg{bacground:none; background-color:#010101; height: 310px; text-align: center;}
+#slide-4 .bg{background-image:url('../images/V2.5.png')}
+#info{
     position: fixed;
-    top: 0;
-    left: 0;
-    background-color:#000000;
-    padding:2px 0px;
-    z-index: 999;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0,0,0,0.5);
+    color: #ffffff;
+    padding: 20px;
+    z-index: 9999;
 }
 video{
-    width: 100%;
     height: 100%;
-    position: absolute;
+    width: 100%;
     object-fit: cover;
 }
-#intro video{
-    width: 100%;
-    height: 100%;
+.fill-video{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
-}
-#intro, #third{
-    width: 100%;
-    /*position: relative;*/
-}
-.parallax_field{
     height: 100%;
     width: 100%;
 }
-#intro{
-    color: white;
-    margin: 0 auto;
-    padding: 0;
-    /*min-height: 432px;*/
-}
-
-#second{
-    background: url(../images/V3.3.jpg) 50% 0 no-repeat fixed;
-    color: black;
-    overflow: hidden;
-    padding: 0;
-}
-
-#third{
-    /*padding: 100px 0 0 0;*/
-}
-.intro_video_context{
-    margin: 0 auto;
-    padding-top: 30%;
+.container {
+    display: table;
+    table-layout: fixed;
     width: 100%;
-    min-width: 380px;
-    z-index: 200;
-}
-.story{
-    margin: 0 auto;
-    min-width: 980px;
-    overflow: auto;
-    width: 980px;
-}
-
-.story .float-left, .story .float-right{
-    padding: 100px 0 0 0;
+    height: 100%;
+    overflow: hidden;
     position: relative;
-    width: 350px;
 }
-#logo{
-    float:left;
+
+.cell{
+    width:100%;
+    display: table-cell;
+    vertical-align: middle;
 }
-/*#nav{*/
-    /*float: right;*/
-/*}*/
-/*#nav-list{*/
-    /*list-style: none;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*color: #ffffff;*/
-/*}*/
-/*#nav-list li{*/
-    /*display: inline;*/
-/*}*/
-#slogon{
-    font-size: 28pt;
+#intro{
+    color: #ebebeb;
+    width: 450px;
+    margin: -225px auto 0 auto;
+    text-align: center;
 }
-#buynow{
+#intro p{
+    font-size: 30px;
+    text-align: center;
+}
+#intro span{
+    font-size: 45px;
     border: 2px solid white;
-    font-size: 28pt;
-    padding: 5px;
     border-radius: 0.2em;
+    padding: 2px;
 }
-#app-container{
-    display:inline-block;
-    width:400px;
-    position:relative;
+.cell .cell-float-right{
+    position: absolute;
+    top:2%;
+    right: 5%;
+    height: calc( 100% - 4% );
+    border: 1px solid black;
+    float:right;
+    width: 902px;
 }
-#app{
-    width:400px;
-}
-#app-img{
-    width:1000px;
-}
-#app-picker{
-    width:17px;
-    height:17px;
-    position:absolute;
-    cursor:-webkit-grab;
-    left:50%;
-    top: 44%;
-    background: url(../images/picker.png);
-
-    -moz-transform:rotate(45deg);
-    -moz-transform-origin:0px 93px;
-
-    transform:rotate(45deg);
-    transform-origin:0px 93px;
-
-    -ms-transform:rotate(45deg);
-    -ms-transform-origin:0px 93px;
-
-    -webkit-transform:rotate(45deg);
-    -webkit-transform-origin: 0px 93px;
+.float-right{
+    float:right;
+    width: 450px;
+    height: 50%;
+    border: 1px solid black;
 }
