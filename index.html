@@ -51,24 +51,24 @@
         </div>
     </section>
     <section id="slide-2">
-        <div class="bg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-anchor-target="#slide-2">
+        <div class="bg" data--500p-top="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-anchor-target="#slide-2">
             <div class="container">
                 <div class="cell">
-                    <div class="cell-float-right" data-bottom-top="opacity:0;right: -50%;" data-100-top="opacity:1;right: 2%" data--400-top="opacity:0;right: -50%;">
-                        <div class="float-right"
-
-                                >
-
+                    <div class="cell-float-right" data-bottom-top="opacity:0;right: -50%;" data-10p-top="opacity:0;right: 5%" data--15p-top="opacity:1;right: 5%;" data--515-top="position:fixed;" data--520p-top="position:relative;" data-anchor-target="#slide-2">
+                        <div class="fill-video">
+                            <video id="fit_in_video" preload loop autoplay>
+                                <source src="videos/fit_in.mp4">
+                            </video>
                         </div>
-                        <div class="float-right"></div>
-                        <div class="float-right"></div>
-                        <div class="float-right"></div>
+                        <!--<div class="float-right"></div>-->
+                        <!--<div class="float-right"></div>-->
+                        <!--<div class="float-right"></div>-->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <div id="slide-3">
+    <div id="slide-3" data-550-bottom="background-position:50% -200px;" data-anchor-target="#slide-2">
         <div class="bg">
 
         </div>
@@ -78,11 +78,23 @@
 
         </div>
     </section>
+    <section id="slide-5">
+        <div class="bg" style="background-color: #151515">
+            <img src="images/V4.2.jpg" id="app-img"/>
+            <div id="app-container">
+                <div id="app-picker"></div>
+                <img src="images/app.jpg" id="app"/>
+            </div>
+        </div>
+    </section>
 <!--script-->
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/color2color.min.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
 <script src="scripts/skrollr.min.js"></script>
+<script src="scripts/custom.js"></script>
 <script type="text/javascript">
     var s = skrollr.init({
         render: function(data){
@@ -92,6 +104,9 @@
 
     });
     forceHeight = true;
+    $('document').ready(function(){
+        parallaxContainer();
+    });
 </script>
  <!--end script-->
 </body>
