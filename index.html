@@ -6,6 +6,8 @@
     <!--CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href="css/animations.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!--End CSS-->
 </head>
@@ -14,7 +16,7 @@
         0
     </div>
      <!--Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" data-start="opacity:0;" data-370-start="opacity:1;">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -25,10 +27,11 @@
                 </button>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
+                <div id="menu-logo" data-start="background-size: 0px 0px;" data-370-start="background-size: 70px 65px;" data-390-start="background-size: 60px 56px;"></div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#intro">Airbud</a></li>
-                    <li><a href="#about">Buy Now</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#intro">AIRBUD</a></li>
+                    <li><a href="#about">BUY NOW</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
                     <li><a href="#FAQ">FAQ</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
@@ -38,16 +41,17 @@
         <div class="bg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-1">
             <div class="fill-video">
                 <video preload autoplay >
-                    <source src="videos/Black_glowing.mp4" />
+                    <source src="videos/V2.5.1_Animation.mp4" />
                 </video>
-            </div>
-            <div class="container">
-                <div id="intro" class="cell">
-                    <img src="images/AB-Logo-white.png"/>
-                    <p>Listening With Style</p>
-                    <span>Buy Now</span>
+                <div class="container">
+                    <div id="intro" class="cell">
+                        <img src="images/AB_Logo.png" id="logo"/>
+                        <!--<p>The Perfect Wireless Experience</p>
+                        <span>Buy Now</span>-->
+                    </div>
                 </div>
             </div>
+            <a href ="#" id="arrow-bounce"></a>
         </div>
     </section>
     <section id="slide-2">
@@ -56,8 +60,8 @@
                 <div class="cell">
                     <div class="cell-float-right" data-bottom-top="opacity:0;right: -50%;" data-10p-top="opacity:0;right: 5%" data--15p-top="opacity:1;right: 5%;" data--515-top="position:fixed;" data--520p-top="position:relative;" data-anchor-target="#slide-2">
                         <div class="fill-video">
-                            <video id="fit_in_video" preload loop autoplay>
-                                <source src="videos/fit_in.mp4">
+                            <video id="video-2" preload autoplay>
+                                <source src="videos/V3.3_Animation.mp4">
                             </video>
                         </div>
                         <!--<div class="float-right"></div>-->
@@ -69,8 +73,10 @@
         </div>
     </section>
     <div id="slide-3" data-550-bottom="background-position:50% -200px;" data-anchor-target="#slide-2">
-        <div class="bg">
-
+        <div class="fill-video">
+            <video id="video-3" preload autoplay>
+                <source src="videos/snap_fit.mp4">
+            </video>
         </div>
     </div>
     <section id="slide-4">
@@ -79,8 +85,7 @@
         </div>
     </section>
     <section id="slide-5">
-        <div class="bg" style="background-color: #151515">
-            <img src="images/V4.2.jpg" id="app-img"/>
+        <div id="app-img">
             <div id="app-container">
                 <div id="app-picker"></div>
                 <img src="images/app.jpg" id="app"/>
@@ -99,9 +104,12 @@
     var s = skrollr.init({
         render: function(data){
             $('#info').text(data.curTop);
-        },
-        forceHeight:false
 
+            playVideo($("#video-2"), 500, data.curTop, "once");
+            playVideo($("#video-3"), 550, data.curTop);
+        },
+        forceHeight:false,
+        smoothScrolling:true
     });
     forceHeight = true;
     $('document').ready(function(){
