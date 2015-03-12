@@ -16,7 +16,8 @@
         0
     </div>
      <!--Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top" data-start="opacity:0;" data-370-start="opacity:1;">
+    <!--<nav class="navbar navbar-default navbar-fixed-top" data-start="opacity:0;" data-370-start="opacity:1;">-->
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -38,60 +39,70 @@
         </div>
     </nav>
     <section id="slide-1">
-        <div class="bg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-1">
-            <div class="fill-video">
-                <video preload autoplay >
+        <div class="bg">
+            <div class="bg_absolute_container">
+                <video id="intro_video" preload autoplay>
                     <source src="videos/V2.5.1_Animation.mp4" />
                 </video>
-                <div class="container">
-                    <div id="intro" class="cell">
-                        <img src="images/AB_Logo.png" id="logo"/>
-                        <!--<p>The Perfect Wireless Experience</p>
-                        <span>Buy Now</span>-->
-                    </div>
+            </div>
+            <div class="bg_relative_grid_container">
+                <div id="intro" class="cell">
+                    <img src="images/AB_Logo.png" id="logo"/>
+                    <!--<p>The Perfect Wireless Experience</p>
+                    <span>Buy Now</span>-->
                 </div>
             </div>
+
             <a href ="#" id="arrow-bounce"></a>
         </div>
     </section>
-    <section id="slide-2">
-        <div class="bg" data--500p-top="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-anchor-target="#slide-2">
-            <div class="container">
+    <section id="slide-2" >
+        <div class="bg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-anchor-target="#slide-2">
+            <div class="bg_relative_grid_container">
                 <div class="cell">
-                    <div class="cell-float-right" data-bottom-top="opacity:0;right: -50%;" data-10p-top="opacity:0;right: 5%" data--15p-top="opacity:1;right: 5%;" data--515-top="position:fixed;" data--520p-top="position:relative;" data-anchor-target="#slide-2">
-                        <div class="fill-video">
-                            <video id="video-2" preload autoplay>
-                                <source src="videos/V3.3_Animation.mp4">
-                            </video>
-                        </div>
-                        <!--<div class="float-right"></div>-->
-                        <!--<div class="float-right"></div>-->
-                        <!--<div class="float-right"></div>-->
+                    <div class="float_right margin_right_50p cell_450">
+                        <h1 class="cell_title">What is Lorem Ipsum</h1>
+                        <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <div id="slide-3" data-550-bottom="background-position:50% -200px;" data-anchor-target="#slide-2">
-        <div class="fill-video">
-            <video id="video-3" preload autoplay>
-                <source src="videos/snap_fit.mp4">
-            </video>
+    <div id="slide-3" >
+        <div class="bg" >
+            <div class="bg_relative_grid_container" style="color:#ffffff">
+                <div class="cell">
+                    <div style="width:50%;min-width:450px;margin: 0 auto;">
+                        <div style="height: 310px;float:left;">
+                            <img src="images/V3.1.jpg" />
+                        </div>
+                        <div style="width: 450px;height: 310px;float:left;padding-top: 60px;">
+                            <h1 style="width: 450px;">What is Lorem Ipsum</h1>
+                            <p style="width: 450px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris.</p>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <section id="slide-4">
         <div class="bg">
-
-        </div>
-    </section>
-    <section id="slide-5">
-        <div id="app-img">
-            <div id="app-container">
-                <div id="app-picker"></div>
-                <img src="images/app.jpg" id="app"/>
+            <div class="bg_absolute_container">
+                <video id="video-2" preload>
+                    <source src="videos/snap_fit.mp4" />
+                </video>
             </div>
         </div>
     </section>
+    <!--<section id="slide-5">-->
+        <!--<div id="app-img">-->
+            <!--<div id="app-container">-->
+                <!--<div id="app-picker"></div>-->
+                <!--<img src="images/app.jpg" id="app"/>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
 <!--script-->
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -101,12 +112,25 @@
 <script src="scripts/skrollr.min.js"></script>
 <script src="scripts/custom.js"></script>
 <script type="text/javascript">
+    var video2 = true;
     var s = skrollr.init({
         render: function(data){
             $('#info').text(data.curTop);
+            var bodyWidth = $(window).width();
+            var v3topoffset = $( "#slide-4").offset().top;
+//            console.log(topoffset);
+            if(data.curTop >= v3topoffset && video2){
+                $("#video-2")[0].play();
+//                playVideo($("#video-2"), v3topoffset, data.curTop, "once");
+                video2 = false;
+                console.log('test');
+            }
+//            if((data.curTop > bodyWidth+v3topoffset || data.curTop < v3topoffset) && video2 == false ){
+//                video2 = true;
+//                $("#video-2")[0].pause();
+//            }
 
-            playVideo($("#video-2"), 500, data.curTop, "once");
-            playVideo($("#video-3"), 550, data.curTop);
+//            playVideo($("#video-3"), 550, data.curTop);
         },
         forceHeight:false,
         smoothScrolling:true
@@ -115,6 +139,7 @@
     $('document').ready(function(){
         parallaxContainer();
     });
+
 </script>
  <!--end script-->
 </body>

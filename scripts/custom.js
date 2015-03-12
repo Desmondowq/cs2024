@@ -17,9 +17,9 @@ function parallaxContainer(){
     //}else{
     //    $('.intro_video_context').css('top','20%');
     //}
-    if($('#fit_in_video').length){
-        $('#fit_in_video').css('height',(bodyWidth*0.55)*0.5625);
-    }
+    //if($('#fit_in_video').length){
+    //    $('#fit_in_video').css('height',(bodyWidth*0.55)*0.5625);
+    //}
 }
 $(window).resize(function() {
     parallaxContainer();
