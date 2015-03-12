@@ -12,17 +12,17 @@
     <!--End CSS-->
 </head>
 <body>
-    <div id="info">
-        0
-    </div>
+    <!--<div id="info">-->
+        <!--0-->
+    <!--</div>-->
     <div id="dot-nav-bar">
         <ul>
             <li><a title="Airbud" href="#slide-1"><span>1</span></a></li>
             <li><a title="intro" href="#slide-2"><span>1</span></a></li>
             <li><a title="submenu" href="#slide-3"><span>1</span></a></li>
             <li><a title="fit in video" href="#slide-4"><span>1</span></a></li>
-            <li><a title="spec" href="#slide-5"><span>1</span></a></li>
             <li><a title="color changing wire" href="#slide-45"><span>1</span></a></li>
+            <li><a title="spec" href="#slide-5"><span>1</span></a></li>
             <li><a title="Buy now" href="#slide-6"><span>1</span></a></li>
             <li><a title="contact us" href="#slide-7"><span>1</span></a></li>
         </ul>
@@ -228,7 +228,7 @@
 
     var s = skrollr.init({
         render: function(data){
-            $('#info').text(data.curTop);
+//            $('#info').text(data.curTop);
             var bodyHeight = $(window).height();
             var v3topoffset = $( "#slide-4").offset().top;
             var vspecoffset = $("#slide-45").offset().top;

@@ -25,8 +25,7 @@ a:hover{text-decoration: none;color: #ffffff;}
 .fixed{
     position:fixed;
 }
-#slide-5{background-color: #151515;}
-#slide-5{height: auto;}
+#slide-5{background-color: #151515;height: auto;}
 /*#slide-1 .bg{background:#fff;}*/
 #slide-2 .bg{background-image:url('../images/V3.3.jpg'); }
 #slide-3 .bg{bacground:none; background-color:#010101;}
@@ -151,7 +150,7 @@ video{
 }
 #app-container{
     width:400px;
-    position: absolute;
+    /*position: absolute;*/
     top: 17%;
     right: 2%;
 }
@@ -314,7 +313,7 @@ nav{
 }
 #slideshow #slide-3{
     bottom:0;
->>>>>>> Stashed changes
+/*>>>>>>> Stashed changes*/
 }
 #intro-content{
     position:absolute;
@@ -360,11 +359,12 @@ nav{
     }
 }
 @media (max-width:1301px) {
-    .bg-opacity{
+    .bg-opacity {
         background-color: #cccccc;
         padding: 2px;
         border-radius: 0.8em;
     }
+}
 .option-box{
     width: 150px;
     padding: 10px 0 0 0;
