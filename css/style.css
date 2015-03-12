@@ -230,6 +230,7 @@ nav{
     background-color: #ffffff;
     padding: 50px;
 }
+<<<<<<< Updated upstream
 .spec{
     float: left;
     height: 155px;
@@ -243,4 +244,39 @@ nav{
 }
 .spec_desc{
     font-size: 14pt;
+=======
+#main-container{
+    width:960px;
+    margin:0 auto;
+    margin-top: 60px;
+    padding: 20px 0 0 0;
+}
+#left-container{
+    display: inline-block;
+    width:480px;
+}
+#right-container{
+    display: inline-block;
+    width:480px;
+}
+#slideshow{
+    position:relative;
+    width:480px;
+    height: 700px;
+}
+#slideshow .slide{
+    position:absolute;
+}
+#slideshow img{
+    width:480px;
+}
+#slideshow #slide-1{
+    bottom:0;
+}
+#slideshow #slide-2{
+    bottom:0;
+}
+#slideshow #slide-3{
+    bottom:0;
+>>>>>>> Stashed changes
 }

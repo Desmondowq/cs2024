@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AirBud - Buy Now</title>
+    <!--CSS-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href="css/animations.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!--End CSS-->
+</head>
+<body>
+<div id="info">
+    0
+</div>
+<!--Fixed navbar -->
+<!--<nav class="navbar navbar-default navbar-fixed-top" data-start="opacity:0;" data-370-start="opacity:1;">-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <div id="menu-logo" data-start="background-size: 60px 56px;" data-370-start="background-size: 70px 65px;" data-390-start="background-size: 60px 56px;"></div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#intro">AIRBUD</a></li>
+                <li><a href="#about">BUY NOW</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div id="main-container">
+    <div id="left-container">
+        <div id="slideshow">
+            <div id="slide-1" class="slide">
+                <img src="images/V2.7.png"/>
+            </div>
+            <div id="slide-2" class="slide">
+                <img src="images/V3.2.2.png"/>
+            </div>
+            <div id="slide-3" class="slide">
+                <img src="images/V3.4.png"/>
+            </div>
+        </div>
+    </div>
+    <div id="right-container">
+        <h2>AirBud</h2>
+        <p>Buy now and get a free carrying case.</p>
+    </div>
+</div>
+<!--script-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/color2color.min.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script src="scripts/skrollr.min.js"></script>
+<script src="scripts/custom.js"></script>
+<script src="scripts/buynow-slideshow.js"></script>
+<script type="text/javascript">
+    var video2 = true;
+    var s = skrollr.init({
+        render: function(data){
+            $('#info').text(data.curTop);
+        },
+        forceHeight:false,
+        smoothScrolling:true
+    });
+    forceHeight = true;
+    $('document').ready(function(){
+        parallaxContainer();
+    });
+
+</script>
+<!--end script-->
+</body>
+</html>
