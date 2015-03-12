@@ -10,10 +10,24 @@
     <link href="css/animations.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!--End CSS-->
+
+
+
 </head>
 <body>
     <div id="info">
         0
+    </div>
+    <div id="dot-nav-bar">
+        <ul>
+            <li><a href="#slide-1"><img src="images/dot.png"></a></li>
+            <li><a href="#slide-2"><img src="images/dot.png"></a></li>
+            <li><a href="#slide-3"><img src="images/dot.png"></a></li>
+            <li><a href="#slide-4"><img src="images/dot.png"></a></li>
+            <li><a href="#slide-5"><img src="images/dot.png"></a></li>
+            <li><a href="#slide-6"><img src="images/dot.png"></a></li>
+            <li><a href="#slide-7"><img src="images/dot.png"></a></li>
+        </ul>
     </div>
      <!--Fixed navbar -->
     <!--<nav class="navbar navbar-default navbar-fixed-top" data-start="opacity:0;" data-370-start="opacity:1;">-->
@@ -29,10 +43,10 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <div id="menu-logo" data-start="background-size: 0px 0px;" data-370-start="background-size: 70px 65px;" data-390-start="background-size: 60px 56px;"></div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#intro">AIRBUD</a></li>
-                    <li><a href="#about">BUY NOW</a></li>
-                    <li><a href="#contact">CONTACT US</a></li>
+                <ul id="scrolling" class="nav navbar-nav navbar-right">
+                    <li><a href="#slide-1">AIRBUD</a></li>
+                    <li><a href="#slide-6">BUY NOW</a></li>
+                    <li><a href="#slide-7">CONTACT US</a></li>
                     <li><a href="#FAQ">FAQ</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
@@ -110,8 +124,20 @@
         </div>
     </section>
     <section id="slide-5">
-        <div class="bg" id="app-img" data-bottom-top="background-position:-100px 0" data-center="background-position:0 0" data-anchor-target="#slide-5">
+        <div class="bg" id="app-img" data-bottom-top="background-position:-100px 0;" data-center="background-position:0 0;" data-anchor-target="#slide-5">
             <div class="bg_relative_grid_container" >
+                <div class="slide-5-cell-top cell_450" data-bottom-top="left:-10%" data-center="left:10%" data-anchor-target="#slide-5">
+                    <div>
+                        <h1 class="cell_title">What is Lorem Ipsum</h1>
+                        <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
+                    </div>
+                </div>
+                <div class="slide-5-cell-btm cell_450" data-bottom-top="right:10%" data-center="right:30%" data-anchor-target="#slide-5">
+                    <div>
+                        <h1 class="cell_title">What is Lorem Ipsum</h1>
+                        <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
+                    </div>
+                </div>
                 <div id="app-container" data-bottom-top="right:20%;" data-center="right:2%" data-anchor-target="#slide-5">
                     <div id="app-picker"></div>
                     <img  src="images/app.jpg" id="app"/>
@@ -119,6 +145,25 @@
             </div>
         </div>
     </section>
+    <div id="slide-45">
+        <div class="bg">
+            <div class="bg_relative_grid_container" style="color:#ffffff">
+                <div class="cell">
+                    <div style="width:50%;max-width:900px;min-width:450px;margin: 0 auto;">
+                        <div class="spec"><p class="spec_indi" id="batterylife">0</p><p class="spec_desc">Estimated Battery life</p></div>
+                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Sound Armature</p></div>
+                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Earpiece weight</p></div>
+                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Color Supported</p></div>
+                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Bluetooth</p></div>
+                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Wifi</p></div>
+                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Mic</p></div>
+                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Fibre</p></div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <section id="slide-6">
         <div class="bg">
             <div class="bg_relative_grid_container">
@@ -176,20 +221,26 @@
 
 <!--script-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.localScroll.min.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/color2color.min.js"></script>
 <script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/jquery.animateNumber.min.js"></script>
 <script src="scripts/skrollr.min.js"></script>
 <script src="scripts/custom.js"></script>
 <script type="text/javascript">
-    var video2 = true;
+
     var s = skrollr.init({
         render: function(data){
             $('#info').text(data.curTop);
             var bodyHeight = $(window).height();
             var v3topoffset = $( "#slide-4").offset().top;
+            var vspecoffset = $("#slide-45").offset().top;
+            var video2 = true;
+            var spectoggle = true;
 //            console.log(topoffset);
-            if(data.curTop >= (v3topoffset-300) && video2){
+            if(data.curTop >= (v3topoffset-300) && data.curTop <=v3topoffset+bodyHeight  && video2){
                 if ( $("#video-2")[0].currentTime < 5){
                     $("#video-2")[0].play();
                 }else{
@@ -197,11 +248,17 @@
                     $("#video-2")[0].play();
                 }
                 video2 = false;
-                console.log('test');
-            }
-            if((data.curTop >= bodyHeight+v3topoffset || data.curTop < v3topoffset-300 ) && video2 == false ){
+//                console.log('test');
+            }else{
                 video2 = true;
                 $("#video-2")[0].pause();
+            }
+//            if((data.curTop >= bodyHeight+v3topoffset || data.curTop < v3topoffset-300 ) && video2 == false ){
+//
+//            }
+            if( data.curTop >= vspecoffset-bodyHeight && data.curTop <= vspecoffset+310 && spectoggle){
+                var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+                $('#batterylife').animateNumber({ number: 350,numberStep: comma_separator_number_step },1000);
             }
 
 //            playVideo($("#video-3"), 550, data.curTop);
@@ -209,11 +266,12 @@
         forceHeight:false,
         smoothScrolling:true
     });
-    forceHeight = true;
+    $('#scrolling').localScroll(800);
+    $('#dot-nav-bar').localScroll(800);
     $('document').ready(function(){
         parallaxContainer();
-    });
 
+    });
 </script>
  <!--end script-->
 </body>
