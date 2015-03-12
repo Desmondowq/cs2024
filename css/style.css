@@ -28,6 +28,7 @@ a{text-decoration: none;color: #ffffff;}
 /*#slide-1 .bg{background:#fff;}*/
 #slide-2 .bg{background-image:url('../images/V3.3.jpg'); }
 #slide-3 .bg{bacground:none; background-color:#010101;}
+#slide-45 .bg{bacground:none; background-color:#010101;}
 /*#slide-4 .bg{background-image:url('../images/V2.5.png');}*/
 #slide-5 .bg{
     background-image: url(../images/V4.2.jpg);
@@ -46,6 +47,21 @@ a{text-decoration: none;color: #ffffff;}
     color: #ffffff;
     padding: 20px;
     z-index: 9999;
+}
+#dot-nav-bar{
+    position: fixed;
+    top: 40%;
+    right: 2%;
+    background-color: rgba(0,0,0,0.5);
+    color: #ffffff;
+    z-index: 9999;
+    padding: 5px;
+}
+#dot-nav-bar ul{
+    list-style-type: none;
+}
+#dot-nav-bar ul  li{
+    /*display: inline;*/
 }
 video{
     height: 100%;
@@ -189,6 +205,14 @@ nav{
 .slide-4-cell-btm{
     position: absolute; bottom: 5%; right: 5%;
 }
+.slide-5-cell-top {
+    color: #ffffff;
+    position: absolute; top: 10%; left: 10%;
+}
+.slide-5-cell-btm{
+    color: #ffffff;
+    position: absolute; bottom: 20%; right: 30%;
+}
 #buynow{
     color: #ffffff;
     width: 100%;
@@ -205,4 +229,53 @@ nav{
     min-width: 450px;
     background-color: #ffffff;
     padding: 50px;
+}
+.spec{
+    float: left;
+    height: 155px;
+    width: 225px;
+    color: #ffffff;
+    text-align: center;
+}
+.spec_indi{
+    font-size: 46pt;
+    font-weight: bold;
+}
+.spec_desc {
+    font-size: 14pt;
+}
+#main-container{
+    width:960px;
+    margin:0 auto;
+    margin-top: 60px;
+    padding: 20px 0 0 0;
+}
+#left-container{
+    display: inline-block;
+    width:480px;
+}
+#right-container{
+    display: inline-block;
+    width:480px;
+}
+#slideshow{
+    position:relative;
+    width:480px;
+    height: 700px;
+}
+#slideshow .slide{
+    position:absolute;
+}
+#slideshow img{
+    width:480px;
+}
+#slideshow #slide-1{
+    bottom:0;
+}
+#slideshow #slide-2{
+    bottom:0;
+}
+#slideshow #slide-3{
+    bottom:0;
+>>>>>>> Stashed changes
 }
