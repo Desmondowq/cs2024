@@ -1,6 +1,7 @@
 *{padding: 0; margin: 0;}
 html,body{height: 100%;width: 100%;min-height: 100%}
 section{width: 100%;height: 100%;}
+a{text-decoration: none;color: #ffffff;}
 .navbar{
     -webkit-box-shadow: 0px 20px 19px -13px rgba(0,0,0,0.31);
     -moz-box-shadow: 0px 20px 19px -13px rgba(0,0,0,0.31);
@@ -31,6 +32,12 @@ section{width: 100%;height: 100%;}
 #slide-5 .bg{
     background-image: url(../images/V4.2.jpg);
 }
+#slide-6 .bg{
+    background-image: url(../images/buynow.jpeg);
+}
+#slide-7 .bg{
+    background-image: url(../images/singapore.jpg);
+}
 #info{
     position: fixed;
     top: 20px;
@@ -56,13 +63,18 @@ video{
 
 .cell{
     width:100%;
-    display: table-cell;
+    display:table-cell;
     vertical-align: middle;
 }
 .cell-top{
     width:100%;
-    display: table-cell;
+    display: table-row;
     vertical-align: top;
+}
+.cell-bottom{
+    width:100%;
+    display: table-row;
+    vertical-align: bottom;
 }
 
 #intro{
@@ -70,6 +82,16 @@ video{
     width: 450px;
     margin: -225px auto 0 auto;
     text-align: center;
+}
+#intro p{
+    font-size: 30px;
+    text-align: center;
+}
+#intro span{
+    font-size: 45px;
+    border: 2px solid white;
+    border-radius: 0.2em;
+    padding: 2px;
 }
 .float_right{
     float: right;
@@ -157,4 +179,27 @@ nav{
 .navbar-right li{
     font-size: 1.35em;
     font-family: 'Abel', sans-serif;
+}
+.slide-4-cell-top {
+    position: absolute; top: 5%; left: 5%;
+}
+.slide-4-cell-btm{
+    position: absolute; bottom: 5%; right: 5%;
+}
+#buynow{
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+}
+#buynowicon{
+    border: 1px solid white;
+    border-radius: 0.2em;
+    padding: 10px;
+    font-size: 20pt;
+}
+#contactus{
+    max-width: 900px;
+    min-width: 450px;
+    background-color: #ffffff;
+    padding: 50px;
 }
