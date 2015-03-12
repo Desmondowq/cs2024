@@ -2,6 +2,7 @@
 html,body{height: 100%;width: 100%;min-height: 100%}
 section{width: 100%;height: 100%;}
 a{text-decoration: none;color: #ffffff;}
+a:hover{text-decoration: none;color: #ffffff;}
 .navbar{
     -webkit-box-shadow: 0px 20px 19px -13px rgba(0,0,0,0.31);
     -moz-box-shadow: 0px 20px 19px -13px rgba(0,0,0,0.31);
@@ -25,6 +26,7 @@ a{text-decoration: none;color: #ffffff;}
     position:fixed;
 }
 #slide-5{background-color: #151515;}
+#slide-5{height: auto;}
 /*#slide-1 .bg{background:#fff;}*/
 #slide-2 .bg{background-image:url('../images/V3.3.jpg'); }
 #slide-3 .bg{bacground:none; background-color:#010101;}
@@ -51,18 +53,36 @@ a{text-decoration: none;color: #ffffff;}
 #dot-nav-bar{
     position: fixed;
     top: 40%;
-    right: 2%;
-    background-color: rgba(0,0,0,0.5);
-    color: #ffffff;
+    right: 0;
+    background-color: #ffffff;
+    border-bottom: 2px solid #cccccc;
+    border-top: 2px solid #cccccc;
+    border-left: 2px solid #cccccc;
     z-index: 9999;
     padding: 5px;
-    border-radius: 12px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -20px 0px 70px -13px rgba(0,0,0,0.75);
+    color: #cccccc;
 }
 #dot-nav-bar ul{
     list-style-type: none;
 }
-#dot-nav-bar ul  li{
-    /*display: inline;*/
+#dot-nav-bar ul li{
+    border: 2px solid #cccccc;
+    margin: 5px;
+    /*border-radius: 15px;*/
+    background-color: #cccccc;
+    color: #cccccc;
+}
+#dot-nav-bar ul li a{
+    color: #cccccc;
+}
+#dot-nav-bar ul li a span{
+    text-indent: -9999px;
+    height: 15px;
+    width: 15px;
+    display:block;
+    padding: 1px;
 }
 video{
     height: 100%;
@@ -101,11 +121,11 @@ video{
     text-align: center;
 }
 #intro p{
-    font-size: 30px;
+    font-size: 1.875em;
     text-align: center;
 }
 #intro span{
-    font-size: 45px;
+    font-size: 2.813em;
     border: 2px solid white;
     border-radius: 0.2em;
     padding: 2px;
@@ -124,10 +144,10 @@ video{
 }
 .cell_title{
     font-weight: bold;
-    font-size: 22pt;
+    font-size: 2em;
 }
 .cell_message{
-    font-size: 14pt;
+    font-size: 1.4em;
 }
 #app-container{
     width:400px;
@@ -208,11 +228,11 @@ nav{
 }
 .slide-5-cell-top {
     color: #ffffff;
-    position: absolute; top: 10%; left: 10%;
+    top: 10%; left: 10%;
 }
 .slide-5-cell-btm{
     color: #ffffff;
-    position: absolute; bottom: 20%; right: 30%;
+    bottom: 20%; right: 30%;
 }
 #buynow{
     color: #ffffff;
@@ -223,7 +243,7 @@ nav{
     border: 1px solid white;
     border-radius: 0.2em;
     padding: 10px;
-    font-size: 20pt;
+    font-size: 1.6em;
 }
 #contactus{
     max-width: 900px;
@@ -239,11 +259,11 @@ nav{
     text-align: center;
 }
 .spec_indi{
-    font-size: 46pt;
+    font-size: 3.65em;
     font-weight: bold;
 }
 .spec_desc {
-    font-size: 14pt;
+    font-size: 1.125em;
 }
 #main-container{
     width:960px;
@@ -292,6 +312,59 @@ nav{
     margin: 20px 0 20px 0;
     overflow: hidden;
 }
+#slideshow #slide-3{
+    bottom:0;
+>>>>>>> Stashed changes
+}
+#intro-content{
+    position:absolute;
+    top: 50%;
+    left:50%;
+    width: 400px;
+    transform: translateX(-50%) translateY(-50%);
+}
+#submenu{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+#submenu-image{
+    height: 310px;
+}
+#submenu-context{
+    width: 450px;
+    height: 310px;
+    padding-top: 60px;
+}
+
+@media (min-width: 1320px) {
+    .slide-5-cell-top,.slide-5-cell-btm,#app-container{
+        position:absolute;
+    }
+    #slide-5{
+        height: 100%;
+        width: 100%;
+    }
+}
+@media (min-width: 701px) {
+    #intro-content{
+        left: auto !important;
+        right: 10%;
+        transform: translatex(-50%) translatey(-50%) !important;
+    }
+    #submenu{
+        width: 850px;
+    }
+    .sub-menu-float-left{
+        float:left;
+    }
+}
+@media (max-width:1301px) {
+    .bg-opacity{
+        background-color: #cccccc;
+        padding: 2px;
+        border-radius: 0.8em;
+    }
 .option-box{
     width: 150px;
     padding: 10px 0 0 0;
