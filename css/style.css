@@ -59,6 +59,12 @@ video{
     display: table-cell;
     vertical-align: middle;
 }
+.cell-top{
+    width:100%;
+    display: table-cell;
+    vertical-align: top;
+}
+
 #intro{
     color: #ebebeb;
     width: 450px;
