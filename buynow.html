@@ -6,10 +6,14 @@
     <!--CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
-    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
     <link href="css/animations.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!--End CSS-->
+    <!--Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--End Fonts-->
 </head>
 <body>
 <div id="info">
@@ -30,8 +34,8 @@
         <div id="navbar" class="navbar-collapse collapse">
             <div id="menu-logo" data-start="background-size: 60px 56px;" data-370-start="background-size: 70px 65px;" data-390-start="background-size: 60px 56px;"></div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#intro">AIRBUD</a></li>
-                <li><a href="#about">BUY NOW</a></li>
+                <li><a href="index.html">AIRBUD</a></li>
+                <li><a href="buynow.html">BUY NOW</a></li>
                 <li><a href="#contact">CONTACT US</a></li>
                 <li><a href="#FAQ">FAQ</a></li>
             </ul>
@@ -42,7 +46,70 @@
 <div id="main-container">
     <div id="left-container">
         <div id="slideshow">
-            <div id="slide-1" class="slide">
+            <keyframe class="scene1"
+                      style="
+                      -webkit-animation: scene1-transform 24000ms ease-in-out 0s infinite, scene1-opacity 24000ms ease-in-out 0s infinite;
+                      -webkit-animation-play-state: initial;" >
+                <style>
+                    @-webkit-keyframes scene1-transform {
+                        0%   { transform: translateY(70px); }
+                        40%  { transform: translateY(0px); }
+                        100% { transform: translateY(0px); }
+                    }
+                    @-webkit-keyframes scene1-opacity {
+                        0%   { opacity: 0; }
+                        5%   { opacity: 1; }
+                        35%  { opacity: 1; }
+                        40%  { opacity: 0; }
+                        100% { opacity: 0; }
+                    }
+                </style>
+                <img src="images/V2.7.png" >
+            </keyframe>
+            <keyframe class="scene2"
+                      style="
+                      -webkit-animation: scene2-transform 24000ms ease-in-out 0s infinite, scene2-opacity 24000ms ease-in-out 0s infinite;
+                      -webkit-animation-play-state: initial;" >
+                <style>
+                    @-webkit-keyframes scene2-transform {
+                        0%   { transform: translateY(0px); }
+                        30%  { transform: translateY(0px); }
+                        70%  { transform: translateY(-120px); }
+                        100% { transform: translateY(-120px); }
+                    }
+                    @-webkit-keyframes scene2-opacity {
+                        0%   { opacity: 0; }
+                        35%  { opacity: 0; }
+                        40%  { opacity: 1; }
+                        65%  { opacity: 1; }
+                        70%  { opacity: 0; }
+                        100% { opacity: 0; }
+                    }
+
+                </style>
+                <img src="images/V3.2.2.png" >
+            </keyframe>
+            <keyframe class="scene3"
+                      style="
+                      -webkit-animation: scene3-transform 24000ms ease-in-out 0s infinite, scene3-opacity 24000ms ease-in-out 0s infinite;
+                      -webkit-animation-play-state: initial;" >
+                <style>
+                    @-webkit-keyframes scene3-transform {
+                        0%   { transform: translateY(0px); }
+                        60%  { transform: translateY(0px); }
+                        100% { transform: translateY(-120px); }
+                    }
+                    @-webkit-keyframes scene3-opacity {
+                        0%   { opacity: 0; }
+                        65%  { opacity: 0; }
+                        70%  { opacity: 1; }
+                        95%  { opacity: 1; }
+                        100% { opacity: 0; }
+                    }
+                </style>
+                <img src="images/V3.4.png" >
+            </keyframe>
+            <!--<div id="slide-1" class="slide">
                 <img src="images/V2.7.png"/>
             </div>
             <div id="slide-2" class="slide">
@@ -50,12 +117,30 @@
             </div>
             <div id="slide-3" class="slide">
                 <img src="images/V3.4.png"/>
-            </div>
+            </div>-->
         </div>
     </div>
     <div id="right-container">
-        <h2>AirBud</h2>
-        <p>Buy now and get a free carrying case.</p>
+        <h2 class="slideInUp">AIRBUD</h2>
+        <h3 class="slideInDown">Buy now and get a free carrying case.</h3>
+        <div class="divider slideInDown"></div>
+        <h4 class="slideInDown">Select a finish:</h4>
+        <div class="option-container">
+            <a href="#" onclick="updatePrice(this,348)">
+                <div class="option-box slideInUp">
+                    <div class="option-text">CHROMIUM</div>
+                    <img src="images/chromium-option.png"/>
+                </div>
+            </a>
+            <a href="#" onclick="updatePrice(this,688)">
+                <div class="option-box slideInUp">
+                    <div class="option-text">GOLD</div>
+                    <img src="images/gold-option.png"/>
+                </div>
+            </a>
+        </div>
+        <div id="price" class="slideInUp">Price From S$348</div>
+        <button type="button" class="btn btn-default slideInUp" id="pay">BUY</button>
     </div>
 </div>
 <!--script-->
@@ -65,7 +150,6 @@
 <script type="text/javascript" src="scripts/app.js"></script>
 <script src="scripts/skrollr.min.js"></script>
 <script src="scripts/custom.js"></script>
-<script src="scripts/buynow-slideshow.js"></script>
 <script type="text/javascript">
     var video2 = true;
     var s = skrollr.init({
@@ -80,6 +164,13 @@
         parallaxContainer();
     });
 
+    var price;
+    function updatePrice(optionBox,price){
+        $('a').removeClass('active');
+        $(optionBox).addClass('active');
+        $("#price").text('Price: S$'+price);
+        $('#pay').addClass('active');
+    }
 </script>
 <!--end script-->
 </body>
