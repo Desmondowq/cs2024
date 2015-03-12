@@ -121,6 +121,9 @@ video{
 #app{
     width:400px;
 }
+#app-container:hover{
+    cursor: pointer;
+}
 
 #app-picker{
     width:17px;
