@@ -230,7 +230,6 @@ nav{
     background-color: #ffffff;
     padding: 50px;
 }
-<<<<<<< Updated upstream
 .spec{
     float: left;
     height: 155px;
@@ -242,9 +241,9 @@ nav{
     font-size: 46pt;
     font-weight: bold;
 }
-.spec_desc{
+.spec_desc {
     font-size: 14pt;
-=======
+}
 #main-container{
     width:960px;
     margin:0 auto;
