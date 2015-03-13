@@ -16,7 +16,7 @@
         })
     }
     function Rgba(rgba){
-        this.rgba = rgba
+        this.rgba = rgba;
         this.toString = function(){ return "rgba("+Array.prototype.join.call(this.rgba,',')+")" };
     }
     $.Event.prototype.rgba=function(){

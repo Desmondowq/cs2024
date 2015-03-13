@@ -6,213 +6,225 @@
     <!--CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
-    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
     <link href="css/animations.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!--End CSS-->
+    <!--Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+    <!--End Fonts-->
 </head>
 <body>
-    <!--<div id="info">-->
-        <!--0-->
-    <!--</div>-->
-    <div id="dot-nav-bar">
-        <ul>
-            <li><a title="Airbud" href="#slide-1"><span>1</span></a></li>
-            <li><a title="intro" href="#slide-2"><span>1</span></a></li>
-            <li><a title="submenu" href="#slide-3"><span>1</span></a></li>
-            <li><a title="fit in video" href="#slide-4"><span>1</span></a></li>
-            <li><a title="spec" href="#slide-5"><span>1</span></a></li>
-            <li><a title="color changing wire" href="#slide-45"><span>1</span></a></li>
-            <li><a title="Buy now" href="#slide-6"><span>1</span></a></li>
-            <li><a title="contact us" href="#slide-7"><span>1</span></a></li>
-        </ul>
-    </div>
-     <!--Fixed navbar -->
-    <!--<nav class="navbar navbar-default navbar-fixed-top" data-start="opacity:0;" data-370-start="opacity:1;">-->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <div id="menu-logo" data-start="background-size: 0px 0px;" data-370-start="background-size: 70px 65px;" data-390-start="background-size: 60px 56px;"></div>
-                <ul id="scrolling" class="nav navbar-nav navbar-right">
-                    <li><a href="#slide-1">AIRBUD</a></li>
-                    <li><a href="buynow.html">BUY NOW</a></li>
-                    <li><a href="#slide-7">CONTACT US</a></li>
-                    <li><a href="#FAQ">FAQ</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
+<!--<div id="info">-->
+<!--0-->
+<!--</div>-->
+<div id="dot-nav-bar">
+    <ul>
+        <li><a title="Airbud" href="#slide-1"><span>1</span></a></li>
+        <li><a title="intro" href="#slide-2"><span>1</span></a></li>
+        <li><a title="submenu" href="#slide-3"><span>1</span></a></li>
+        <li><a title="fit in video" href="#slide-4"><span>1</span></a></li>
+        <li><a title="spec" href="#slide-5"><span>1</span></a></li>
+        <li><a title="color changing wire" href="#slide-45"><span>1</span></a></li>
+        <li><a title="Buy now" href="#slide-6"><span>1</span></a></li>
+        <li><a title="contact us" href="#slide-7"><span>1</span></a></li>
+    </ul>
+</div>
+<!--Fixed navbar -->
+<!--<nav class="navbar navbar-default navbar-fixed-top" data-start="opacity:0;" data-370-start="opacity:1;">-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-    </nav>
-    <section id="slide-1">
-        <div class="bg">
-            <div class="bg_absolute_container">
-                <video id="intro_video" preload autoplay>
-                    <source src="videos/V2.5.1_Animation.mp4" />
-                </video>
+        <div id="navbar" class="navbar-collapse collapse">
+            <div id="menu-logo" data-start="background-size: 0px 0px;" data-370-start="background-size: 70px 65px;" data-390-start="background-size: 60px 56px;"></div>
+            <ul id="scrolling" class="nav navbar-nav navbar-right">
+                <li><a href="#slide-1">AIRBUD</a></li>
+                <li><a href="buynow.html">BUY NOW</a></li>
+                <li><a href="#slide-7">CONTACT US</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<section id="slide-1">
+    <div class="bg">
+        <div class="bg_absolute_container">
+            <video id="intro_video" preload autoplay>
+                <source src="videos/V2.5.1_Animation.mp4" />
+            </video>
+        </div>
+        <div class="bg_relative_grid_container">
+            <div id="intro" class="cell">
+                <img src="images/AB_Logo.png" id="logo"/>
+                <!--<p>The Perfect Wireless Experience</p>
+                <span>Buy Now</span>-->
             </div>
-            <div class="bg_relative_grid_container">
-                <div id="intro" class="cell">
-                    <img src="images/AB_Logo.png" id="logo"/>
-                    <!--<p>The Perfect Wireless Experience</p>
-                    <span>Buy Now</span>-->
+        </div>
+
+        <a href ="#" id="arrow-bounce"></a>
+    </div>
+</section>
+<section id="slide-2" >
+    <div class="bg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-anchor-target="#slide-2">
+        <div class="bg_relative_grid_container">
+            <div id="intro-content">
+                <h1 class="cell_title">What is Lorem Ipsum</h1>
+                <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="slide-3" >
+    <div class="bg" >
+        <div class="bg_relative_grid_container" style="color:#ffffff">
+            <div id="submenu">
+                <div id="submenu-image" class="sub-menu-float-left">
+                    <img src="images/V3.1.jpg" />
+                </div>
+                <div id="submenu-context" class="sub-menu-float-left">
+                    <h1 style="width: 450px;">What is Lorem Ipsum</h1>
+                    <p style="width: 450px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris.</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="slide-4">
+    <div class="bg">
+        <div class="bg_absolute_container">
+            <video id="video-2" preload poster="images/video2poster.jpg">
+                <source src="videos/snap_fit.mp4" />
+            </video>
+        </div>
+        <div class="bg_relative_grid_container" >
+            <div class="slide-4-cell-top cell_450 bg-opacity" data-bottom-top="transform:translateX(-100%);" data-center="transform:translateX(0);" data-anchor-target="#slide-4">
+                <div>
+                    <h1 class="cell_title">What is Lorem Ipsum</h1>
+                    <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
                 </div>
             </div>
-
-            <a href ="#" id="arrow-bounce"></a>
-        </div>
-    </section>
-    <section id="slide-2" >
-        <div class="bg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -200px;" data-anchor-target="#slide-2">
-            <div class="bg_relative_grid_container">
-                <div id="intro-content">
+            <div class="slide-4-cell-btm cell_450 bg-opacity" data-bottom-top="transform:translateX(100%);" data-center="transform:translateX(0);" data-anchor-target="#slide-4">
+                <div>
                     <h1 class="cell_title">What is Lorem Ipsum</h1>
                     <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
                 </div>
             </div>
         </div>
-    </section>
-    <div id="slide-3" >
-        <div class="bg" >
-            <div class="bg_relative_grid_container" style="color:#ffffff">
-                <div id="submenu">
-                    <div id="submenu-image" class="sub-menu-float-left">
-                        <img src="images/V3.1.jpg" />
+    </div>
+</section>
+<section id="slide-5" style="background: #000;">
+    <div class="bg" id="app-img" data-bottom-top="background-position:-100px 0;" data-center="background-position:0 0;" data-anchor-target="#slide-5">
+        <div class="bg_relative_grid_container">
+            <div class="slide-5-cell-top cell_450" data-bottom-top="left:-10%" data-center="left:10%" data-anchor-target="#slide-5">
+                <div>
+                    <h1 class="cell_title">What is Lorem Ipsum</h1>
+                    <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
+                </div>
+            </div>
+
+            <div id="app-container" data-bottom-top="right:20%;" data-center="right:2%" data-anchor-target="#slide-5">
+                <div id="app-picker" ></div>
+                <img  src="images/app.png"  id="app"/>
+            </div>
+            <!--<div class="slide-5-cell-btm cell_450" >
+                <div>
+                    <h1 class="cell_title">What is Lorem Ipsum</h1>
+                    <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</section>
+<div id="slide-45">
+    <div class="bg">
+        <div class="bg_relative_grid_container" style="color:#ffffff">
+            <div class="cell">
+                <div style="width:50%;max-width:900px;min-width:450px;margin: 0 auto;padding-top:40px;">
+                    <div class="spec">
+                        <p class="spec_indi" id="batterylife">14</p>
+                        <p class="spec_desc">BATTERY LIFE</p>
                     </div>
-                    <div id="submenu-context" class="sub-menu-float-left">
-                        <h1 style="width: 450px;">What is Lorem Ipsum</h1>
-                        <p style="width: 450px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris.</p>
+                    <div class="spec">
+                        <p class="spec_indi" id="drivers">4</p>
+                        <p class="spec_desc">HD TITANIUM DRIVERS</p>
+                    </div>
+                    <div class="spec">
+                        <p class="spec_indi" id="weight">120</p>
+                        <p class="spec_desc">WEIGHT</p>
+                    </div>
+                    <div class="spec">
+                        <p class="spec_indi" id="colors">16</p>
+                        <p class="spec_desc">COLOR SPECTRUM</p>
                     </div>
                     <div style="clear: both;"></div>
                 </div>
             </div>
         </div>
     </div>
-    <section id="slide-4">
-        <div class="bg">
-            <div class="bg_absolute_container">
-                <video id="video-2" preload poster="images/video2poster.jpg">
-                    <source src="videos/snap_fit.mp4" />
-                </video>
-            </div>
-            <div class="bg_relative_grid_container" >
-                <div class="slide-4-cell-top cell_450 bg-opacity" data-bottom-top="transform:translateX(-100%);" data-center="transform:translateX(0);" data-anchor-target="#slide-4">
-                    <div>
-                        <h1 class="cell_title">What is Lorem Ipsum</h1>
-                        <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
-                    </div>
-                </div>
-                <div class="slide-4-cell-btm cell_450 bg-opacity" data-bottom-top="transform:translateX(100%);" data-center="transform:translateX(0);" data-anchor-target="#slide-4">
-                    <div>
-                        <h1 class="cell_title">What is Lorem Ipsum</h1>
-                        <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="slide-5">
-        <div class="bg" id="app-img" data-bottom-top="background-position:-100px 0;" data-center="background-position:0 0;" data-anchor-target="#slide-5">
-            <div class="bg_relative_grid_container">
-                <div class="slide-5-cell-top cell_450" data-bottom-top="left:-10%" data-center="left:10%" data-anchor-target="#slide-5">
-                    <div>
-                        <h1 class="cell_title">What is Lorem Ipsum</h1>
-                        <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
-                    </div>
-                </div>
-
-                <div id="app-container" data-bottom-top="right:20%;" data-center="right:2%" data-anchor-target="#slide-5">
-                    <div id="app-picker" ></div>
-                    <img  src="images/app.jpg"  id="app"/>
-                </div>
-                <div class="slide-5-cell-btm cell_450" >
-                    <div>
-                        <h1 class="cell_title">What is Lorem Ipsum</h1>
-                        <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div id="slide-45">
-        <div class="bg">
-            <div class="bg_relative_grid_container" style="color:#ffffff">
-                <div class="cell">
-                    <div style="width:50%;max-width:900px;min-width:450px;margin: 0 auto;">
-                        <div class="spec"><p class="spec_indi" id="batterylife">0</p><p class="spec_desc">Estimated Battery life</p></div>
-                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Sound Armature</p></div>
-                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Earpiece weight</p></div>
-                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Color Supported</p></div>
-                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Bluetooth</p></div>
-                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Wifi</p></div>
-                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Mic</p></div>
-                        <div class="spec"><p class="spec_indi">0</p><p class="spec_desc">Fibre</p></div>
-                        <div style="clear: both;"></div>
-                    </div>
-                </div>
+</div>
+<section id="slide-6">
+    <div class="bg">
+        <div class="bg_relative_grid_container">
+            <div class="cell">
+                <center id="buynow">
+                    <h1 class="cell_title">The Perfect Wireless Experience</h1>
+                    <p class="cell_message" style="margin-bottom: 40px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan justo diam</p>
+                    <span id="buynowicon"><a href="buynow.html">BUY NOW</a></span>
+                </center>
             </div>
         </div>
     </div>
-    <section id="slide-6">
-        <div class="bg">
-            <div class="bg_relative_grid_container">
-                <div class="cell">
-                    <center id="buynow">
-                        <h1 class="cell_title">The Perfect Wireless Experience</h1>
-                        <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan justo diam</p>
-                        <span id="buynowicon"><a href="#">Buy Now!!!<a></a></span>
-                    </center>
-                </div>
+</section>
+<section id="slide-7">
+    <div class="bg">
+        <div class="bg_relative_grid_container">
+            <div class="cell">
+                <center>
+
+                    <form id="contactus">
+                        <div id="contactmessage">
+                            <h1>Lorem lpsum</h1>
+                            <p style="text-align: left;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a fringilla tellus. Nullam posuere ultricies lobortis. Morbi luctus turpis eget egestas suscipit. Phasellus ut convallis sem. Sed volutpat convallis porttitor. Aliquam erat volutpat. Vestibulum placerat sem eu suscipit vehicula. Donec quis tellus dapibus, consequat nunc nec, elementum dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <label style="float:left;" for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label style="float:left;" for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label style="float:left;" for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                        </div>
+
+                        <div class="form-group">
+                            <label style="float:left;" for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <button  style="float:right;" type="submit" class="btn btn-default">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </center>
             </div>
         </div>
-    </section>
-    <section id="slide-7">
-        <div class="bg">
-            <div class="bg_relative_grid_container">
-                <div class="cell">
-                    <center>
-
-                        <form id="contactus">
-                            <div id="contactmessage">
-                                <h1>Lorem lpsum</h1>
-                                <p style="text-align: left;">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a fringilla tellus. Nullam posuere ultricies lobortis. Morbi luctus turpis eget egestas suscipit. Phasellus ut convallis sem. Sed volutpat convallis porttitor. Aliquam erat volutpat. Vestibulum placerat sem eu suscipit vehicula. Donec quis tellus dapibus, consequat nunc nec, elementum dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                            </div>
-                            <div class="form-group">
-                                <label style="float:left;" for="name">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <label style="float:left;" for="email">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Your Email">
-                            </div>
-                            <div class="form-group">
-                                <label style="float:left;" for="subject">Subject</label>
-                                <input type="text" class="form-control" id="subject" placeholder="Subject">
-                            </div>
-
-                            <div class="form-group">
-                                <label style="float:left;" for="message">Message</label>
-                                <textarea class="form-control" id="message" rows="5"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <div>
-                                    <button  style="float:right;" type="submit" class="btn btn-default">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </center>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
 <!--script-->
 <script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
@@ -246,8 +258,14 @@
                 $("#video-2")[0].pause();
             }
             if( data.curTop >= vspecoffset-bodyHeight && data.curTop <= vspecoffset+310 && spectoggle){
-                var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
-                $('#batterylife').animateNumber({ number: 350,numberStep: comma_separator_number_step },5000);
+                var comma_separator_number_step = $.animateNumber.numberStepFactories.append('hrs');
+                $('#batterylife').animateNumber({ number: $('#batterylife').text(),numberStep: comma_separator_number_step, easing:'easeInOutQuad'},1000);
+                comma_separator_number_step = $.animateNumber.numberStepFactories.append('');
+                $('#drivers').animateNumber({ number: $('#drivers').text(),numberStep: comma_separator_number_step, easing:'easeInOutQuad'},1000);
+                comma_separator_number_step = $.animateNumber.numberStepFactories.append('g');
+                $('#weight').animateNumber({ number: $('#weight').text(),numberStep: comma_separator_number_step, easing:'easeInOutQuad'},2000);
+                comma_separator_number_step = $.animateNumber.numberStepFactories.append('M');
+                $('#colors').animateNumber({ number: $('#colors').text(),numberStep: comma_separator_number_step, easing:'easeInOutQuad'},1000);
             }
             sideBarDisplay(data.curTop);
         },
@@ -256,8 +274,19 @@
 
     });
     $('#scrolling').localScroll(800);
-    $('#dot-nav-bar').localScroll(800);
+    $('#dot-nav-bar').localScroll({
+        queue:true,
+        duration:800,
+        hash:true,
+        offset:{top:-40, left:0},
+        onBefore:function( e, anchor, $target ){
+            // The 'this' is the settings object, can be modified
+        },
+        onAfter:function( anchor, settings ){
+            // The 'this' contains the scrolled element (#content)
+        }
+    });
 </script>
- <!--end script-->
+<!--end script-->
 </body>
 </html>
