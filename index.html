@@ -52,6 +52,84 @@
                 <li><a href="#FAQ">FAQ</a></li>
             </ul>
         </div><!--/.nav-collapse -->
+    <!--<div id="info">-->
+        <!--0-->
+    <!--</div>-->
+    <div id="dot-nav-bar">
+        <ul>
+            <li><a class="dot-nav-a" href="#slide-1"><span>1</span></a>
+                <div class="label" style="display:none; opacity: 0; right: 25px;">
+                    <span class="navtitle">
+                        <span>Introduce</span>
+                        <br>
+                        "Starting Page"
+                    </span>
+                </div>
+            </li>
+            <li><a class="dot-nav-a" title="intro" href="#slide-2"><span>1</span></a>
+                <div class="label" style="display:none; opacity: 0; right: 25px;">
+                    <span class="navtitle">
+                        <span>test</span>
+                        <br>
+                        "test"
+                    </span>
+                </div>
+            </li>
+            <li><a class="dot-nav-a" title="submenu" href="#slide-3"><span>1</span></a>
+                <div class="label" style="display:none; opacity: 0; right: 25px;">
+                    <span class="navtitle">
+                        <span>Introduce</span>
+                        <br>
+                        "Starting Page"
+                    </span>
+                </div>
+            </li>
+            <li><a class="dot-nav-a" title="fit in video" href="#slide-4"><span>1</span></a>
+                <div class="label" style="display:none; opacity: 0; right: 25px;">
+                    <span class="navtitle">
+                        <span>Introduce</span>
+                        <br>
+                        "Starting Page"
+                    </span>
+                </div>
+            </li>
+            <li><a class="dot-nav-a" title="spec" href="#slide-5"><span>1</span></a>
+                <div class="label" style="display:none; opacity: 0; right: 25px;">
+                    <span class="navtitle">
+                        <span>Introduce</span>
+                        <br>
+                        "Starting Page"
+                    </span>
+                </div>
+            </li>
+            <li><a class="dot-nav-a" title="color changing wire" href="#slide-45"><span>1</span></a>
+                <div class="label" style="display:none; opacity: 0; right: 25px;">
+                    <span class="navtitle">
+                        <span>Introduce</span>
+                        <br>
+                        "Starting Page"
+                    </span>
+                </div>
+            </li>
+            <li><a class="dot-nav-a" title="Buy now" href="#slide-6"><span>1</span></a>
+                <div class="label" style="display:none; opacity: 0; right: 25px;">
+                    <span class="navtitle">
+                        <span>Introduce</span>
+                        <br>
+                        "Starting Page"
+                    </span>
+                </div>
+            </li>
+            <li><a class="dot-nav-a" title="contact us" href="#slide-7"><span>1</span></a>
+                <div class="label" style="display:none; opacity: 0; right: 25px;">
+                    <span class="navtitle">
+                        <span>Introduce</span>
+                        <br>
+                        "Starting Page"
+                    </span>
+                </div>
+            </li>
+        </ul>
     </div>
 </nav>
 <section id="slide-1">
@@ -130,6 +208,17 @@
                     <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
                 </div>
             </div>
+        </div>
+    </section>
+    <section id="slide-5" style="background-color: #151515">
+        <div class="bg" id="app-img" data-bottom-top="background-position:-100px 0;" data-center="background-position:0 0;" data-anchor-target="#slide-5">
+            <div class="bg_relative_grid_container">
+                <div class="slide-5-cell-top cell_450" data-bottom-top="left:-10%" data-center="left:10%" data-anchor-target="#slide-5">
+                    <div>
+                        <h1 class="cell_title">What is Lorem Ipsum</h1>
+                        <p class="cell_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit venenatis ante, in efficitur tellus consequat sit amet. Duis nisi est, vestibulum in ornare ut, molestie non mauris. Fusce porta scelerisque dui, vitae tempor sem pellentesque vel. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse diam nisl, venenatis non augue quis, pretium rhoncus elit.</p>
+                    </div>
+                </div>
 
             <div id="app-container" data-bottom-top="right:20%;" data-center="right:2%" data-anchor-target="#slide-5">
                 <div id="app-picker" ></div>
@@ -245,17 +334,15 @@
             var bodyHeight = $(window).height();
             var v3topoffset = $("#slide-4").offset().top;
             var vspecoffset = $("#slide-45").offset().top;
-            if(data.curTop >= (v3topoffset-300) && data.curTop <=v3topoffset+bodyHeight  && fit_in_video){
-                if ( $("#video-2")[0].currentTime < 5){
+//            if(data.curTop >= (v3topoffset-300) && data.curTop <=v3topoffset+bodyHeight  && fit_in_video){
+            if(data.curTop >= (v3topoffset-500)  && fit_in_video){
+//                if ( $("#video-2")[0].currentTime < 5){
                     $("#video-2")[0].play();
-                }else{
-                    $("#video-2")[0].load();
-                    $("#video-2")[0].play();
-                }
+//                }else{
+//                    $("#video-2")[0].load();
+//                    $("#video-2")[0].play();
+//                }
                 fit_in_video = false;
-            }else{
-                fit_in_video = true;
-                $("#video-2")[0].pause();
             }
             if( data.curTop >= vspecoffset-bodyHeight && data.curTop <= vspecoffset+310 && spectoggle){
                 var comma_separator_number_step = $.animateNumber.numberStepFactories.append('hrs');
@@ -266,6 +353,14 @@
                 $('#weight').animateNumber({ number: $('#weight').text(),numberStep: comma_separator_number_step, easing:'easeInOutQuad'},2000);
                 comma_separator_number_step = $.animateNumber.numberStepFactories.append('M');
                 $('#colors').animateNumber({ number: $('#colors').text(),numberStep: comma_separator_number_step, easing:'easeInOutQuad'},1000);
+//            else{
+//                fit_in_video = true;
+//                $("#video-2")[0].pause();
+//            }
+//            if( data.curTop >= vspecoffset-bodyHeight && data.curTop <= vspecoffset+310 && spectoggle){
+            if( data.curTop >= vspecoffset-bodyHeight && spectoggle){
+                var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+                $('#batterylife').animateNumber({ number: 350,numberStep: comma_separator_number_step },5000);
             }
             sideBarDisplay(data.curTop);
         },
@@ -286,6 +381,13 @@
             // The 'this' contains the scrolled element (#content)
         }
     });
+    $('#dot-nav-bar').localScroll(800);
+    $('#dot-nav-bar ul li').hover(function(){
+        $(this).children('.label').css('display','block').css('opacity','1');
+    },function(){
+        $(this).children('.label').css('display','none').css('opacity','0');
+            }
+    );
 </script>
 <!--end script-->
 </body>
