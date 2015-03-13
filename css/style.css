@@ -400,6 +400,28 @@ nav{
         width: 100%;
     }
 }
+#faq-section{
+    background-color: #101010;
+}
+.faq-container{
+    width: 450px;
+    margin: 0 auto;
+    color:white;
+    text-align: left;
+}
+.heading{
+    margin: 50px 0;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0.5em;
+}
+.faq_question{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.faq_answer{
+    margin-bottom: 60px;
+}
 @media (min-width: 701px) {
     #intro-content{
         left: auto !important;
@@ -411,6 +433,9 @@ nav{
     }
     .sub-menu-float-left{
         float:left;
+    }
+    .container{
+        width: 960px;
     }
 }
 @media (max-width:1301px) {
@@ -488,7 +513,7 @@ a.active .option-text{
     color: #fff;
 }
 .container{
-    width: 960px;
+    min-width:450px;
     height: auto;
     font-family: 'Open Sans', sans-serif;
 }
@@ -498,4 +523,20 @@ a.active .option-text{
 #buy-intro .container a:hover{
     text-decoration: none;
     color: #64BBF4;
+}
+#aboutus{
+    background-color: #222222;
+    padding: 40px 0;
+}
+#footer{
+    background-color: #222222;
+    padding: 25px;
+}
+.profile{
+    width: 225px;
+    color: #ffffff;
+    font-size: 18px;
+}
+.profile p{
+    text-align: center;
 }
