@@ -361,7 +361,7 @@ nav{
 @media (max-width:1301px) {
     .bg-opacity {
         background-color: #cccccc;
-        padding: 2px;
+        padding: 8px;
         border-radius: 0.8em;
     }
 }
@@ -431,4 +431,14 @@ a.active .option-text{
 #pay:hover{
     background-color: #3388BF;
     color: #fff;
+}
+.container{
+    width: 960px;
+    height: auto;
+}
+.container a{
+    color: #28a4c9;
+}
+#buy-intro .container a:hover{
+    text-decoration: underline;
 }
