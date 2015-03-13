@@ -16,9 +16,9 @@
     <!--End Fonts-->
 </head>
 <body>
-<div id="info">
-    0
-</div>
+<!--<div id="info">-->
+    <!--0-->
+<!--</div>-->
 <!--Fixed navbar -->
 <!--<nav class="navbar navbar-default navbar-fixed-top" data-start="opacity:0;" data-370-start="opacity:1;">-->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -127,19 +127,47 @@
             <div class="divider slideInDown"></div>
             <h4 class="slideInDown">Select a finish:</h4>
             <div class="option-container">
-                <a href="#" onclick="updatePrice(this,348)">
+                <a href="#" class="finishType" onclick="updatePriceFinishType(this,148)">
                     <div class="option-box slideInUp">
                         <div class="option-text">CHROMIUM</div>
                         <img src="images/chromium-option.png"/>
                     </div>
                 </a>
-                <a href="#" onclick="updatePrice(this,688)">
+                <a href="#" class="finishType" onclick="updatePriceFinishType(this,288)">
                     <div class="option-box slideInUp">
                         <div class="option-text">GOLD</div>
                         <img src="images/gold-option.png"/>
                     </div>
                 </a>
             </div>
+            <h4 class="slideInDown">Select a Wire Type:</h4>
+            <div class="option-container">
+                <a href="#" class="wireType" onclick="updatePriceWireType(this,0)">
+                    <div class="option-box slideInUp" style="height: 60px;">
+                        <div class="option-text">Free Basic 3 Color Wire</div>
+                    </div>
+                </a>
+                <a href="#" class="wireType" onclick="updatePriceWireType(this,388)">
+                    <div class="option-box slideInUp" style="height: 60px;">
+                        <div class="option-text">16.7 Million colors Wire</div>
+                    </div>
+                </a>
+            </div>
+            <h4 class="slideInDown">Receive Type:</h4>
+            <div class="option-container">
+                <a href="#" class="receiveType" onclick="updatePriceReceiveType(this,0)">
+                    <div class="option-box slideInUp" style="height: 40px;">
+                        <div class="option-text">Downloadable</div>
+                    </div>
+                </a>
+                <a href="#" class="receiveType" onclick="updatePriceReceiveType(this,10)">
+                    <div class="option-box slideInUp" style="height: 40px;">
+                        <div class="option-text">CDs</div>
+                    </div>
+                </a>
+            </div>
+            <h3 class="slideInDown">Free delivery</h3>
+            <h3 class="slideInDown">2 years warranty</h3>
             <div id="price" class="slideInUp">Price From S$348</div>
             <button type="button" class="btn btn-default slideInUp" id="pay">BUY</button>
         </div>
@@ -315,7 +343,7 @@
     var video2 = true;
     var s = skrollr.init({
         render: function(data){
-            $('#info').text(data.curTop);
+//            $('#info').text(data.curTop);
         },
         forceHeight:false,
         smoothScrolling:true
@@ -325,13 +353,38 @@
         parallaxContainer();
     });
 
-    var price;
-    function updatePrice(optionBox,price){
-        $('a').removeClass('active');
+    var finish= 0,wire= 0,receive=0;
+    function updatePriceFinishType(optionBox,price){
+        $('.finishType').removeClass('active');
         $(optionBox).addClass('active');
-        $("#price").text('Price: S$'+price);
+        finish = price;
+        $("#price").text('Price: S$'+(finish+wire+receive));
         $('#pay').addClass('active');
     }
+    function updatePriceWireType(optionBox,price){
+        $('.wireType').removeClass('active');
+        $(optionBox).addClass('active');
+        wire = price;
+        $("#price").text('Price: S$'+(finish+wire+receive));
+        $('#pay').addClass('active');
+    }
+    function updatePriceReceiveType(optionBox,price){
+        $('.receiveType').removeClass('active');
+        $(optionBox).addClass('active');
+        receive = price;
+        $("#price").text('Price: S$'+(finish+wire+receive));
+        $('#pay').addClass('active');
+    }
+//    $('#pay').click(function(){
+//        $( ".finishType" ).each(function( index ) {
+//            var className = $(this).attr('class').split(/\s+/);
+//            if(jQuery.inArray( "active", className ) == 1){
+//                return false;
+//            }else{
+//                alert('missing');
+//            }
+//        });
+//    });
 </script>
 <!--end script-->
 </body>
