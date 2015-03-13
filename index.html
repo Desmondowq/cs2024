@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -16,14 +16,11 @@
     <!--End Fonts-->
 </head>
 <body>
-<!--<div id="info">-->
-<!--0-->
-<!--</div>-->
 <!--Fixed navbar -->
 <!--<nav class="navbar navbar-default navbar-fixed-top" data-start="opacity:0;" data-370-start="opacity:1;">-->
-<div id="info">
+<!--<div id="info">
     0
-</div>
+</div>-->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -429,7 +426,7 @@
     var spectoggle = true;
     var s = skrollr.init({
         render: function(data) {
-            $('#info').text(data.curTop);
+            //$('#info').text(data.curTop);
             var bodyHeight = $(window).height();
             var v3topoffset = $("#slide-4").offset().top;
             var vspecoffset = $("#slide-45").offset().top;
