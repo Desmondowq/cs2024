@@ -319,29 +319,95 @@ nav{
 .spec_desc {
     font-size: 1.125em;
 }
-#main-container{
+#main-container,#choose-product{
     width:960px;
     margin:0 auto;
     margin-top: 60px;
     padding: 20px 0 0 0;
-    display: flex;
 }
-#left-container{
+#choose-product{
+    display: flex;
+    margin-top: 0;
+}
+#airbud-setup,#in-box,#tech-spec{
+    margin: 60px 0;
+}
+#tech-spec-title{
+    margin-bottom: 80px;
+}
+#tech-spec-title h2{
+    font-weight: bold;
+    font-size: 46px;
+}
+.tech-spec-row{
+    display: table-row;
+}
+.tech-spec-col1{
+    display:table-cell;
+    width: 300px;
+    text-align: right;
+    vertical-align: top;
+}
+.tech-spec-col1 p{
+    font-size: 24px;
+}
+.tech-spec-col2{
+    display:table-cell;
+    width: 660px;
+    text-align: left;
+    vertical-align: top;
+    padding-left: 30px;
+}
+.left-container{
     width: 620px;
     margin-top: 100px;
 }
-#right-container{
+.right-container{
     width: 360px;
     font-family: 'Open Sans', sans-serif;
     margin-top: 43px;
 }
-#right-container h2{
+.left-sidebar, .right-sidebar{
+    float:left;
+}
+.left-sidebar{
+    width: 520px;
+}
+.right-sidebar{
+    width: 440px;
+}
+.setup-instruction{
+    display: table-row;
+    margin: 50px 0;
+    height: 150px;
+}
+.setup-icon{
+    display:table-cell;
+    vertical-align: middle;
+}
+.setup-message{
+    display:table-cell;
+    vertical-align: middle;
+    padding-left: 12px;
+}
+.setup-message{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+.right-container h2{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 3.5em;
     margin: 0;
     text-align: center;
 }
-#right-container h3{
+.inthebox{
+    width: 320px;
+    height: 300px;
+}
+#inthebox-container{
+    margin: 50px 0;
+}
+.right-container h3{
     font-size:0.9em;
     margin: 5px 0 10px 0;
     text-align: center;
@@ -517,9 +583,18 @@ a.active .option-text{
     height: auto;
     font-family: 'Open Sans', sans-serif;
 }
-.container a{
+#main-container a{
     color: #38A9F2;
 }
+#main-container hr{
+    display: block; height: 1px;
+    border: 0; border-top: 1px solid #ccc;
+    margin: 1em 0; padding: 0;
+}
+#billboard{
+    margin-top: 100px;
+}
+
 #buy-intro .container a:hover{
     text-decoration: none;
     color: #64BBF4;

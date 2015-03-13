@@ -44,121 +44,266 @@
 </nav>
 
 <div id="main-container">
-    <div id="left-container">
-        <div id="slideshow">
-            <keyframe class="scene1"
-                      style="
-                      -webkit-animation: scene1-transform 24000ms ease-in-out 0s infinite, scene1-opacity 24000ms ease-in-out 0s infinite;
-                      -webkit-animation-play-state: initial;" >
-                <style>
-                    @-webkit-keyframes scene1-transform {
-                        0%   { transform: translateY(70px); }
-                        40%  { transform: translateY(0px); }
-                        100% { transform: translateY(0px); }
-                    }
-                    @-webkit-keyframes scene1-opacity {
-                        0%   { opacity: 0; }
-                        5%   { opacity: 1; }
-                        35%  { opacity: 1; }
-                        40%  { opacity: 0; }
-                        100% { opacity: 0; }
-                    }
-                </style>
-                <img src="images/V2.7.png" >
-            </keyframe>
-            <keyframe class="scene2"
-                      style="
-                      -webkit-animation: scene2-transform 24000ms ease-in-out 0s infinite, scene2-opacity 24000ms ease-in-out 0s infinite;
-                      -webkit-animation-play-state: initial;" >
-                <style>
-                    @-webkit-keyframes scene2-transform {
-                        0%   { transform: translateY(0px); }
-                        30%  { transform: translateY(0px); }
-                        70%  { transform: translateY(-120px); }
-                        100% { transform: translateY(-120px); }
-                    }
-                    @-webkit-keyframes scene2-opacity {
-                        0%   { opacity: 0; }
-                        35%  { opacity: 0; }
-                        40%  { opacity: 1; }
-                        65%  { opacity: 1; }
-                        70%  { opacity: 0; }
-                        100% { opacity: 0; }
-                    }
+    <div id="choose-product">
+        <div class="left-container">
+            <div id="slideshow">
+                <keyframe class="scene1"
+                          style="
+                          -webkit-animation: scene1-transform 24000ms ease-in-out 0s infinite, scene1-opacity 24000ms ease-in-out 0s infinite;
+                          -webkit-animation-play-state: initial;" >
+                    <style>
+                        @-webkit-keyframes scene1-transform {
+                            0%   { transform: translateY(70px); }
+                            40%  { transform: translateY(0px); }
+                            100% { transform: translateY(0px); }
+                        }
+                        @-webkit-keyframes scene1-opacity {
+                            0%   { opacity: 0; }
+                            5%   { opacity: 1; }
+                            35%  { opacity: 1; }
+                            40%  { opacity: 0; }
+                            100% { opacity: 0; }
+                        }
+                    </style>
+                    <img src="images/V2.7.png" >
+                </keyframe>
+                <keyframe class="scene2"
+                          style="
+                          -webkit-animation: scene2-transform 24000ms ease-in-out 0s infinite, scene2-opacity 24000ms ease-in-out 0s infinite;
+                          -webkit-animation-play-state: initial;" >
+                    <style>
+                        @-webkit-keyframes scene2-transform {
+                            0%   { transform: translateY(0px); }
+                            30%  { transform: translateY(0px); }
+                            70%  { transform: translateY(-120px); }
+                            100% { transform: translateY(-120px); }
+                        }
+                        @-webkit-keyframes scene2-opacity {
+                            0%   { opacity: 0; }
+                            35%  { opacity: 0; }
+                            40%  { opacity: 1; }
+                            65%  { opacity: 1; }
+                            70%  { opacity: 0; }
+                            100% { opacity: 0; }
+                        }
 
-                </style>
-                <img src="images/V3.2.2.png" >
-            </keyframe>
-            <keyframe class="scene3"
-                      style="
-                      -webkit-animation: scene3-transform 24000ms ease-in-out 0s infinite, scene3-opacity 24000ms ease-in-out 0s infinite;
-                      -webkit-animation-play-state: initial;" >
-                <style>
-                    @-webkit-keyframes scene3-transform {
-                        0%   { transform: translateY(0px); }
-                        60%  { transform: translateY(0px); }
-                        100% { transform: translateY(-120px); }
-                    }
-                    @-webkit-keyframes scene3-opacity {
-                        0%   { opacity: 0; }
-                        65%  { opacity: 0; }
-                        70%  { opacity: 1; }
-                        95%  { opacity: 1; }
-                        100% { opacity: 0; }
-                    }
-                </style>
-                <img src="images/V3.4.png" >
-            </keyframe>
-            <!--<div id="slide-1" class="slide">
-                <img src="images/V2.7.png"/>
+                    </style>
+                    <img src="images/V3.2.2.png" >
+                </keyframe>
+                <keyframe class="scene3"
+                          style="
+                          -webkit-animation: scene3-transform 24000ms ease-in-out 0s infinite, scene3-opacity 24000ms ease-in-out 0s infinite;
+                          -webkit-animation-play-state: initial;" >
+                    <style>
+                        @-webkit-keyframes scene3-transform {
+                            0%   { transform: translateY(0px); }
+                            60%  { transform: translateY(0px); }
+                            100% { transform: translateY(-120px); }
+                        }
+                        @-webkit-keyframes scene3-opacity {
+                            0%   { opacity: 0; }
+                            65%  { opacity: 0; }
+                            70%  { opacity: 1; }
+                            95%  { opacity: 1; }
+                            100% { opacity: 0; }
+                        }
+                    </style>
+                    <img src="images/V3.4.png" >
+                </keyframe>
+                <!--<div id="slide-1" class="slide">
+                    <img src="images/V2.7.png"/>
+                </div>
+                <div id="slide-2" class="slide">
+                    <img src="images/V3.2.2.png"/>
+                </div>
+                <div id="slide-3" class="slide">
+                    <img src="images/V3.4.png"/>
+                </div>-->
             </div>
-            <div id="slide-2" class="slide">
-                <img src="images/V3.2.2.png"/>
+        </div>
+        <div class="right-container">
+            <h2 class="slideInUp">AIRBUD</h2>
+            <h3 class="slideInDown">Buy now and get a free carrying case.</h3>
+            <div class="divider slideInDown"></div>
+            <h4 class="slideInDown">Select a finish:</h4>
+            <div class="option-container">
+                <a href="#" onclick="updatePrice(this,348)">
+                    <div class="option-box slideInUp">
+                        <div class="option-text">CHROMIUM</div>
+                        <img src="images/chromium-option.png"/>
+                    </div>
+                </a>
+                <a href="#" onclick="updatePrice(this,688)">
+                    <div class="option-box slideInUp">
+                        <div class="option-text">GOLD</div>
+                        <img src="images/gold-option.png"/>
+                    </div>
+                </a>
             </div>
-            <div id="slide-3" class="slide">
-                <img src="images/V3.4.png"/>
-            </div>-->
+            <div id="price" class="slideInUp">Price From S$348</div>
+            <button type="button" class="btn btn-default slideInUp" id="pay">BUY</button>
         </div>
     </div>
-    <div id="right-container">
-        <h2 class="slideInUp">AIRBUD</h2>
-        <h3 class="slideInDown">Buy now and get a free carrying case.</h3>
-        <div class="divider slideInDown"></div>
-        <h4 class="slideInDown">Select a finish:</h4>
-        <div class="option-container">
-            <a href="#" onclick="updatePrice(this,348)">
-                <div class="option-box slideInUp">
-                    <div class="option-text">CHROMIUM</div>
-                    <img src="images/chromium-option.png"/>
-                </div>
-            </a>
-            <a href="#" onclick="updatePrice(this,688)">
-                <div class="option-box slideInUp">
-                    <div class="option-text">GOLD</div>
-                    <img src="images/gold-option.png"/>
-                </div>
-            </a>
-        </div>
-        <div id="price" class="slideInUp">Price From S$348</div>
-        <button type="button" class="btn btn-default slideInUp" id="pay">BUY</button>
-    </div>
-
-</div>
-<hr>
-<div id="buy-intro">
-    <div class="container">
+    <hr>
+    <div id="billboard">
         <center>
-            <h1 style="font-size: 3.5em;">Get an in-depth look at Airbud</h1>
+            <h2 class="slideInUp">Get an in-depth look at Airbud</h2>
         </center>
         <center>
-            <a href="#" style="font-size: 2em;font-weight:300;">Visit Airbud's Homepage</a>
+            <h4><a href="index.html">Visit Airbud's Homepage</a></h4>
         </center>
-        <center style="padding-top: 30px;">
+        <center style="margin: 50px 0;">
             <img src="images/buy-intro-pic.png"/>
         </center>
     </div>
+    <hr>
+    <div id="airbud-setup">
+        <div class="left-sidebar">
+            <center><img src="images/setupapp.png"/></center>
+        </div>
+        <div class="right-sidebar">
+            <div>
+                <h2>Getting Start with AIRBUD</h2>
+            </div>
+            <div class="setup-instruction">
+                <div class="setup-icon">
+                    <img src="images/box-icon.png" />
+                </div>
+                <div class="setup-message">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                </div>
+            </div>
+            <div class="setup-instruction">
+                <div class="setup-icon">
+                    <img src="images/connect-icon.png" />
+                </div>
+                <div class="setup-message">
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
+                    </p>
+                </div>
+
+            </div>
+            <div class="setup-instruction">
+                <div class="setup-icon">
+                    <img src="images/Mobile-icon.png" />
+                </div>
+                <div class="setup-message">
+                    <p>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <hr>
+    <div id="in-box">
+        <div id="inthebox-title">
+            <center><h2>What in the box?</h2></center>
+        </div>
+        <div id="inthebox-container">
+            <div class="float_left inthebox">
+                <center><img src="images/earpiece-right.png"/></center>
+            </div>
+            <div class="float_left inthebox">
+                <center><img src="images/earpiece-left.png"/></center>
+            </div>
+            <div class="float_left inthebox">
+                <center><img src="images/wire-inbox.png"/></center>
+            </div>
+            <div class="float_left" style="width: 640px; height: 50px;">
+                <p align="center">Two Wireless Earpods</p>
+            </div>
+            <div class="float_left inthebox" style="height: 50px;">
+                <p align="center">(2 in 1) Glowing, charging charge</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <hr>
+    <div id="tech-spec">
+        <div id="tech-spec-title">
+            <center><h2>Technical Specifications</h2></center>
+        </div>
+        <div class="tech-spec-row">
+            <div class="tech-spec-col1">
+                <p>Finish</p>
+            </div>
+            <div class="tech-spec-col2" style="text-align: center;">
+                <img src="images/tech_spec.png"/>
+                <p>Gold, Siver</p>
+            </div>
+        </div>
+        <div class="tech-spec-row">
+            <div class="tech-spec-col1">
+                <p>Battery Life</p>
+            </div>
+            <div class="tech-spec-col2">
+                <p>Vivamus eget dolor sollicitudin, accumsan turpis eu, condimentum quam. Etiam tincidunt scelerisque leo, quis pharetra risus bibendum vitae. Etiam facilisis eros purus, quis gravida odio convallis nec. Curabitur sagittis vulputate diam id accumsan. Suspendisse commodo rhoncus risus, eget porta lacus rhoncus et. Donec at dolor nec massa auctor eleifend. Sed vel sem ac eros faucibus faucibus id vitae elit.</p>
+            </div>
+        </div>
+
+        <div class="tech-spec-row">
+            <div class="tech-spec-col1">
+                <p>Wire Color and Price</p>
+            </div>
+            <div class="tech-spec-col2">
+                <p>Vivamus eget dolor sollicitudin, accumsan turpis eu, condimentum quam. Etiam tincidunt scelerisque leo, quis pharetra risus bibendum vitae. Etiam facilisis eros purus, quis gravida odio convallis nec. Curabitur sagittis vulputate diam id accumsan. Suspendisse commodo rhoncus risus, eget porta lacus rhoncus et. Donec at dolor nec massa auctor eleifend. Sed vel sem ac eros faucibus faucibus id vitae elit.</p>
+            </div>
+        </div>
+        <div class="tech-spec-row">
+            <div class="tech-spec-col1">
+                <p>Weight and Dimensions</p>
+            </div>
+            <div class="tech-spec-col2">
+                <p>Vivamus eget dolor sollicitudin, accumsan turpis eu, condimentum quam. Etiam tincidunt scelerisque leo, quis pharetra risus bibendum vitae. Etiam facilisis eros purus, quis gravida odio convallis nec. Curabitur sagittis vulputate diam id accumsan. Suspendisse commodo rhoncus risus, eget porta lacus rhoncus et. Donec at dolor nec massa auctor eleifend. Sed vel sem ac eros faucibus faucibus id vitae elit.</p>
+            </div>
+        </div>
+        <div class="tech-spec-row">
+            <div class="tech-spec-col1">
+                <p>Balance Armature</p>
+            </div>
+            <div class="tech-spec-col2">
+                <p>Vivamus eget dolor sollicitudin, accumsan turpis eu, condimentum quam. Etiam tincidunt scelerisque leo, quis pharetra risus bibendum vitae. Etiam facilisis eros purus, quis gravida odio convallis nec. Curabitur sagittis vulputate diam id accumsan. Suspendisse commodo rhoncus risus, eget porta lacus rhoncus et. Donec at dolor nec massa auctor eleifend. Sed vel sem ac eros faucibus faucibus id vitae elit.</p>
+            </div>
+        </div>
+        <div class="tech-spec-row">
+            <div class="tech-spec-col1">
+                <p>Bluetooth</p>
+            </div>
+            <div class="tech-spec-col2">
+                <p>Vivamus eget dolor sollicitudin, accumsan turpis eu, condimentum quam. Etiam tincidunt scelerisque leo, quis pharetra risus bibendum vitae. Etiam facilisis eros purus, quis gravida odio convallis nec. Curabitur sagittis vulputate diam id accumsan. Suspendisse commodo rhoncus risus, eget porta lacus rhoncus et. Donec at dolor nec massa auctor eleifend. Sed vel sem ac eros faucibus faucibus id vitae elit.</p>
+            </div>
+        </div>
+        <div class="tech-spec-row">
+            <div class="tech-spec-col1">
+                <p>Wifi</p>
+            </div>
+            <div class="tech-spec-col2">
+                <p>Vivamus eget dolor sollicitudin, accumsan turpis eu, condimentum quam. Etiam tincidunt scelerisque leo, quis pharetra risus bibendum vitae. Etiam facilisis eros purus, quis gravida odio convallis nec. Curabitur sagittis vulputate diam id accumsan. Suspendisse commodo rhoncus risus, eget porta lacus rhoncus et. Donec at dolor nec massa auctor eleifend. Sed vel sem ac eros faucibus faucibus id vitae elit.</p>
+            </div>
+        </div>
+        <div class="tech-spec-row">
+            <div class="tech-spec-col1">
+                <p>Audio Playback</p>
+            </div>
+            <div class="tech-spec-col2">
+                <p>Vivamus eget dolor sollicitudin, accumsan turpis eu, condimentum quam. Etiam tincidunt scelerisque leo, quis pharetra risus bibendum vitae. Etiam facilisis eros purus, quis gravida odio convallis nec. Curabitur sagittis vulputate diam id accumsan. Suspendisse commodo rhoncus risus, eget porta lacus rhoncus et. Donec at dolor nec massa auctor eleifend. Sed vel sem ac eros faucibus faucibus id vitae elit.</p>
+            </div>
+        </div>
+        <div class="tech-spec-row">
+            <div class="tech-spec-col1">
+                <p>External button</p>
+            </div>
+            <div class="tech-spec-col2">
+                <p>Vivamus eget dolor sollicitudin, accumsan turpis eu, condimentum quam. Etiam tincidunt scelerisque leo, quis pharetra risus bibendum vitae. Etiam facilisis eros purus, quis gravida odio convallis nec. Curabitur sagittis vulputate diam id accumsan. Suspendisse commodo rhoncus risus, eget porta lacus rhoncus et. Donec at dolor nec massa auctor eleifend. Sed vel sem ac eros faucibus faucibus id vitae elit.</p>
+            </div>
+        </div>
+    </div>
 </div>
-<hr>
 <!--script-->
 <script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
