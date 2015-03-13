@@ -19,18 +19,6 @@
 <!--<div id="info">-->
 <!--0-->
 <!--</div>-->
-<div id="dot-nav-bar">
-    <ul>
-        <li><a title="Airbud" href="#slide-1"><span>1</span></a></li>
-        <li><a title="intro" href="#slide-2"><span>1</span></a></li>
-        <li><a title="submenu" href="#slide-3"><span>1</span></a></li>
-        <li><a title="fit in video" href="#slide-4"><span>1</span></a></li>
-        <li><a title="spec" href="#slide-5"><span>1</span></a></li>
-        <li><a title="color changing wire" href="#slide-45"><span>1</span></a></li>
-        <li><a title="Buy now" href="#slide-6"><span>1</span></a></li>
-        <li><a title="contact us" href="#slide-7"><span>1</span></a></li>
-    </ul>
-</div>
 <!--Fixed navbar -->
 <!--<nav class="navbar navbar-default navbar-fixed-top" data-start="opacity:0;" data-370-start="opacity:1;">-->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -52,9 +40,9 @@
                 <li><a href="#FAQ">FAQ</a></li>
             </ul>
         </div><!--/.nav-collapse -->
-        <!--<div id="info">-->
-        <!--0-->
-        <!--</div>-->
+        <div id="info">
+        0
+        </div>
         <div id="dot-nav-bar">
             <ul>
                 <li><a class="dot-nav-a" href="#slide-1"><span>1</span></a>
@@ -319,7 +307,7 @@
     var spectoggle = true;
     var s = skrollr.init({
         render: function(data) {
-//            $('#info').text(data.curTop);
+            $('#info').text(data.curTop);
             var bodyHeight = $(window).height();
             var v3topoffset = $("#slide-4").offset().top;
             var vspecoffset = $("#slide-45").offset().top;
@@ -333,7 +321,7 @@
 //                }
                 fit_in_video = false;
             }
-            if (data.curTop >= vspecoffset - bodyHeight && data.curTop <= vspecoffset + 310 && spectoggle) {
+            if (data.curTop >= vspecoffset - bodyHeight && spectoggle) {
                 var comma_separator_number_step = $.animateNumber.numberStepFactories.append('hrs');
                 $('#batterylife').animateNumber({
                     number: $('#batterylife').text(),
@@ -358,17 +346,19 @@
                     numberStep: comma_separator_number_step,
                     easing: 'easeInOutQuad'
                 }, 1000);
+                spectoggle=false;
 //            else{
 //                fit_in_video = true;
 //                $("#video-2")[0].pause();
 //            }
 //            if( data.curTop >= vspecoffset-bodyHeight && data.curTop <= vspecoffset+310 && spectoggle){
-                if (data.curTop >= vspecoffset - bodyHeight && spectoggle) {
-                    var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
-                    $('#batterylife').animateNumber({number: 350, numberStep: comma_separator_number_step}, 5000);
-                }
-                sideBarDisplay(data.curTop);
+//                if (data.curTop >= vspecoffset - bodyHeight && spectoggle) {
+//                    var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+//                    $('#batterylife').animateNumber({number: 350, numberStep: comma_separator_number_step}, 5000);
+//                }
+
             }
+            sideBarDisplay(data.curTop);
         },
         forceHeight:false,
         smoothScrolling:true
@@ -376,9 +366,7 @@
     });
     $('#scrolling').localScroll(800);
     $('#dot-nav-bar').localScroll({
-        queue:true,
         duration:800,
-        hash:true,
         offset:{top:-40, left:0},
         onBefore:function( e, anchor, $target ){
             // The 'this' is the settings object, can be modified
@@ -387,7 +375,7 @@
             // The 'this' contains the scrolled element (#content)
         }
     });
-    $('#dot-nav-bar').localScroll(800);
+//    $('#dot-nav-bar').localScroll(800);
     $('#dot-nav-bar ul li').hover(function(){
                 $(this).children('.label').css('display','block').css('opacity','1');
             },function(){

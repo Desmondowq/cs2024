@@ -58,6 +58,7 @@ function sideBarDisplay(scrollPos){
         var topOffset = $($( this ).attr( "href" )).offset().top;
         var elemenetHeight = $($( this ).attr( "href" )).height();
         var halfBodyHeight = $(window).height()/2;
+        console.log('test');
         //var btmOffset = $($( this ).attr( "href" )).offset().bottom;
         //console.log("top:"+topOffset+" height:"+elemenetHeight);
         if(scrollPos+halfBodyHeight >= topOffset && scrollPos+halfBodyHeight <= topOffset+elemenetHeight){
