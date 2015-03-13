@@ -35,10 +35,11 @@ a:hover{text-decoration: none;color: #ffffff;}
     background-image: url(../images/V4.2.jpg);
 }
 #slide-6 .bg{
-    background-image: url(../images/buynow.jpeg);
+    background-image: url(../images/buynow-bg.jpg);
 }
 #slide-7 .bg{
-    background-image: url(../images/singapore.jpg);
+    /* background-image: url(../images/singapore.jpg); */
+    background: #F6F6F6;
 }
 #info{
     position: fixed;
@@ -54,9 +55,9 @@ a:hover{text-decoration: none;color: #ffffff;}
     top: 40%;
     right: 0;
     background-color: #ffffff;
-    border-bottom: 2px solid #cccccc;
-    border-top: 2px solid #cccccc;
-    border-left: 2px solid #cccccc;
+    border-bottom: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+    border-left: 1px solid #CCC;
     z-index: 9999;
     padding: 5px;
     border-radius: 10px 0 0 10px;
@@ -67,10 +68,10 @@ a:hover{text-decoration: none;color: #ffffff;}
     list-style-type: none;
 }
 #dot-nav-bar ul li{
-    border: 2px solid #cccccc;
+    /* border: 2px solid #cccccc; */
     margin: 5px;
     /*border-radius: 15px;*/
-    background-color: #cccccc;
+    /* background-color: #cccccc; */
     color: #cccccc;
     position: relative;
 }
@@ -82,12 +83,16 @@ a:hover{text-decoration: none;color: #ffffff;}
 #dot-nav-bar ul li a{
     color: #cccccc;
 }
+#dot-nav-bar ul li a:hover{
+    color: #E05252;
+}
 #dot-nav-bar ul li a span{
     text-indent: -9999px;
     height: 15px;
     width: 15px;
     display:block;
     padding: 1px;
+    border-radius: 10px;
 }
 #dot-nav-bar ul li .label .navtitle::after, #dot-nav-bar ul li .label .navtitle::before{
     left: 100%;
@@ -121,8 +126,9 @@ a:hover{text-decoration: none;color: #ffffff;}
     opacity: 0.8;
     border: 1px solid #cccccc;
     border-radius: 5px;
-    color: black;
-    font-size: 1.5em;
+    color: #666666;
+    font-size: 1.6em;
+    font-family: Abel, sans-serif;
 }
 .navtitle span{
     font-weight: bold;
@@ -189,9 +195,13 @@ video{
     /* font-weight: bold; */
     font-size: 2.6em;
 }
+#slide-2 .cell_message, #slide-4 .cell_message{
+    color: #515151;
+}
 .cell_message{
-    font-size: 1.2em;
+    font-size: 1.15em;
     font-family: 'Open Sans', sans-serif;
+    color: #BABABA;
 }
 #app-container{
     width:400px;
@@ -245,13 +255,16 @@ video{
 #arrow-bounce{
     display: block;    text-indent: -9999px;
     margin: 0 auto;
+    margin-top: -45px;
     width: 30px;
     height: 30px;
     background-size: 30px 30px;
     background-image: url(../images/circle-down.svg);
     -webkit-animation: bounce 2s infinite ease-in-out;
 }
-
+#arrow-bounce:hover{
+    background-image:url(../images/circle-down-hover.svg);
+}
 nav{
     text-align:center;
     height:60px;
@@ -272,7 +285,7 @@ nav{
 }
 .slide-5-cell-top {
     color: #ffffff;
-    top: 10%; left: 10%;
+    top: 20%; left: 10%;
 }
 .slide-5-cell-btm{
     color: #ffffff;
@@ -307,17 +320,19 @@ nav{
 .spec{
     float: left;
     height: 155px;
-    width: 178px;
-    color: #ffffff;
+    width: 169px;
+    /* color: #3E95C8; */
     text-align: center;
 }
 .spec_indi{
     font-size: 3.65em;
     font-weight: 300;
     font-family: 'Open Sans', sans-serif;
+    color: #03CCFF;;
 }
 .spec_desc {
     font-size: 1.125em;
+    color: #4A5C6D;
 }
 #main-container,#choose-product{
     width:960px;
@@ -457,7 +472,7 @@ nav{
     padding-top: 60px;
 }
 
-@media (min-width: 1320px) {
+@media (min-width: 1000px) {
     .slide-5-cell-top,.slide-5-cell-btm,#app-container{
         position:absolute;
     }
@@ -506,9 +521,9 @@ nav{
 }
 @media (max-width:1301px) {
     .bg-opacity {
-        background-color: #cccccc;
-        padding: 8px;
-        border-radius: 0.8em;
+        /* background-color: #cccccc; */
+        /* padding: 8px; */
+        /* border-radius: 0.8em; */
     }
 }
 .option-box{
@@ -614,4 +629,28 @@ a.active .option-text{
 }
 .profile p{
     text-align: center;
+}
+.contactus-title{
+    text-align:center;
+}
+.contactus-title .title{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    color: #25292C;
+}
+.form-group label{
+    color: #6E6E6E;
+    font-weight: 400;
+}
+#slide-7 .btn-default{
+    background: #525C71;
+    text-shadow: 0 0px 0 #2F3238;
+    color: #FFFFFF;
+    font-size: 1em;
+    text-transform:  uppercase;
+    font-weight: 400;
 }

@@ -62,7 +62,7 @@ function sideBarDisplay(scrollPos){
         //var btmOffset = $($( this ).attr( "href" )).offset().bottom;
         //console.log("top:"+topOffset+" height:"+elemenetHeight);
         if(scrollPos+halfBodyHeight >= topOffset && scrollPos+halfBodyHeight <= topOffset+elemenetHeight){
-            $(this).children().css('background-color','black');
+            $(this).children().css('background-color','#707070');
         }else{
             $(this).children().css('background-color','#ccc');
         }
