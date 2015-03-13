@@ -1,6 +1,6 @@
 *{padding: 0; margin: 0;}
 html,body{height: 100%;width: 100%;min-height: 100%}
-section{width: 100%;height: 100%; overflow-x: hidden;}
+section{width: 100%;height: 100%; overflow-x: hidden;overflow-y: hidden;}
 a{text-decoration: none;color: #428BCA;}
 a:hover{text-decoration: none;color: #71B6F2;}
 .navbar{
