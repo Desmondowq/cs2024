@@ -2,7 +2,7 @@
 html,body{height: 100%;width: 100%;min-height: 100%}
 section{width: 100%;height: 100%; overflow-x: hidden;}
 a{text-decoration: none;color: #428BCA;}
-a:hover{text-decoration: none;color: #ffffff;}
+a:hover{text-decoration: none;color: #71B6F2;}
 .navbar{
     -webkit-box-shadow: 0px 20px 19px -13px rgba(0,0,0,0.31);
     -moz-box-shadow: 0px 20px 19px -13px rgba(0,0,0,0.31);
@@ -28,8 +28,8 @@ a:hover{text-decoration: none;color: #ffffff;}
 #slide-5{background-color: #151515;height: auto;}
 /*#slide-1 .bg{background:#fff;}*/
 #slide-2 .bg{background-image:url('../images/V3.3.jpg'); }
-#slide-3 .bg{bacground:none; background-color:#010101;}
-#slide-45 .bg{bacground:none; background-color:#010101;}
+#slide-3 .bg{background:none; background-color:#010101;}
+#slide-45 .bg{background:none; background-color:#010101;}
 /*#slide-4 .bg{background-image:url('../images/V2.5.png');}*/
 #slide-5 .bg{
     background-image: url(../images/V4.2.jpg);
@@ -343,6 +343,7 @@ nav{
 #choose-product{
     display: flex;
     margin-top: 0;
+    clear: both;
 }
 #airbud-setup,#in-box,#tech-spec{
     margin: 60px 0;
@@ -375,13 +376,15 @@ nav{
     padding-left: 30px;
 }
 .left-container{
-    width: 620px;
+    width: 600px;
     margin-top: 100px;
+    float: left;
 }
 .right-container{
     width: 360px;
     font-family: 'Open Sans', sans-serif;
     margin-top: 43px;
+    float: left;
 }
 .left-sidebar, .right-sidebar{
     float:left;
@@ -433,14 +436,13 @@ nav{
 }
 #slideshow{
     position:relative;
-    width:480px;
     height: 700px;
 }
 #slideshow keyframe{
     position: absolute;
 }
 #slideshow img{
-    width: 660px;
+    width: 580px;
     /* height: 540px; */
 }
 .divider{
@@ -512,7 +514,9 @@ nav{
         left: auto !important;
         right: 10%;
         transform: translatex(-50%) translatey(-50%) !important;
-    }
+    
+        font-size: 15px;
+}
     #submenu{
         width: 850px;
     }
@@ -612,6 +616,7 @@ a.active .option-text{
 }
 #billboard{
     margin-top: 100px;
+    clear: both;
 }
 
 #buy-intro .container a:hover{
