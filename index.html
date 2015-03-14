@@ -1,4 +1,5 @@
-<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<!--<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">-->
+<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -32,7 +33,7 @@
             </button>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <div id="menu-logo" data-start="background-size: 0px 0px;" data-370-start="background-size: 70px 65px;" data-390-start="background-size: 60px 56px;"></div>
+            <div id="menu-logo" data-start="background-size: 0px 0px;" data-370-start="background-size: 90px 90px;" data-390-start="background-size: 60px 60px;"></div>
             <ul id="scrolling" class="nav navbar-nav navbar-right">
                 <li><a href="#slide-1">AIRBUD</a></li>
                 <li><a href="buynow.html">BUY NOW</a></li>
@@ -112,7 +113,7 @@
 <section id="slide-1">
     <div class="bg">
         <div class="bg_absolute_container">
-            <video id="intro_video" preload autoplay>
+            <video id="intro_video" preload autoplay poster="images/V2.5.png">
                 <source src="videos/V2.5.1_Animation.mp4" />
             </video>
         </div>
@@ -416,67 +417,67 @@
 <script src="scripts/skrollr.min.js"></script>
 <script src="scripts/custom.js"></script>
 <script type="text/javascript">
-    var fit_in_video = true;
-    var spectoggle = true;
-    var s = skrollr.init({
-        render: function(data) {
-            //$('#info').text(data.curTop);
-            var bodyHeight = $(window).height();
-            var v3topoffset = $("#slide-4").offset().top;
-            var vspecoffset = $("#slide-45").offset().top;
-//            if(data.curTop >= (v3topoffset-300) && data.curTop <=v3topoffset+bodyHeight  && fit_in_video){
-            if (data.curTop >= (v3topoffset - 500) && fit_in_video) {
-//                if ( $("#video-2")[0].currentTime < 5){
-                $("#video-2")[0].play();
-//                }else{
-//                    $("#video-2")[0].load();
-//                    $("#video-2")[0].play();
-//                }
-                fit_in_video = false;
-            }
-            if (data.curTop >= vspecoffset - bodyHeight && spectoggle) {
-                var comma_separator_number_step = $.animateNumber.numberStepFactories.append('hrs');
-                $('#batterylife').animateNumber({
-                    number: $('#batterylife').text(),
-                    numberStep: comma_separator_number_step,
-                    easing: 'easeInOutQuad'
-                }, 3000);
-                comma_separator_number_step = $.animateNumber.numberStepFactories.append('');
-                $('#drivers').animateNumber({
-                    number: $('#drivers').text(),
-                    numberStep: comma_separator_number_step,
-                    easing: 'easeInOutQuad'
-                }, 1000);
-                comma_separator_number_step = $.animateNumber.numberStepFactories.append('g');
-                $('#weight').animateNumber({
-                    number: $('#weight').text(),
-                    numberStep: comma_separator_number_step,
-                    easing: 'easeInOutQuad'
-                }, 4000);
-                comma_separator_number_step = $.animateNumber.numberStepFactories.append('M');
-                $('#colors').animateNumber({
-                    number: $('#colors').text(),
-                    numberStep: comma_separator_number_step,
-                    easing: 'easeInOutQuad'
-                }, 4000);
-                spectoggle=false;
-//            else{
-//                fit_in_video = true;
-//                $("#video-2")[0].pause();
-//            }
-//            if( data.curTop >= vspecoffset-bodyHeight && data.curTop <= vspecoffset+310 && spectoggle){
-//                if (data.curTop >= vspecoffset - bodyHeight && spectoggle) {
-//                    var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
-//                    $('#batterylife').animateNumber({number: 350, numberStep: comma_separator_number_step}, 5000);
-//                }
+    if(!window.mobilecheck()) {
+        var fit_in_video = true;
+        var spectoggle = true;
+        var s = skrollr.init({
+            render: function (data) {
+                //$('#info').text(data.curTop);
+                var bodyHeight = $(window).height();
+                var v3topoffset = $("#slide-4").offset().top;
+                var vspecoffset = $("#slide-45").offset().top;
+                if (data.curTop >= (v3topoffset - 500) && fit_in_video) {
+                    $("#video-2")[0].play();
+                    //                }else{
+                    //                    $("#video-2")[0].load();
+                    //                    $("#video-2")[0].play();
+                    //                }
+                    fit_in_video = false;
+                }
+                if (data.curTop >= vspecoffset - bodyHeight && spectoggle) {
+                    var comma_separator_number_step = $.animateNumber.numberStepFactories.append('hrs');
+                    $('#batterylife').animateNumber({
+                        number: $('#batterylife').text(),
+                        numberStep: comma_separator_number_step,
+                        easing: 'easeInOutQuad'
+                    }, 3000);
+                    comma_separator_number_step = $.animateNumber.numberStepFactories.append('');
+                    $('#drivers').animateNumber({
+                        number: $('#drivers').text(),
+                        numberStep: comma_separator_number_step,
+                        easing: 'easeInOutQuad'
+                    }, 1000);
+                    comma_separator_number_step = $.animateNumber.numberStepFactories.append('g');
+                    $('#weight').animateNumber({
+                        number: $('#weight').text(),
+                        numberStep: comma_separator_number_step,
+                        easing: 'easeInOutQuad'
+                    }, 4000);
+                    comma_separator_number_step = $.animateNumber.numberStepFactories.append('M');
+                    $('#colors').animateNumber({
+                        number: $('#colors').text(),
+                        numberStep: comma_separator_number_step,
+                        easing: 'easeInOutQuad'
+                    }, 4000);
+                    spectoggle = false;
+                    //            else{
+                    //                fit_in_video = true;
+                    //                $("#video-2")[0].pause();
+                    //            }
+                    //            if( data.curTop >= vspecoffset-bodyHeight && data.curTop <= vspecoffset+310 && spectoggle){
+                    //                if (data.curTop >= vspecoffset - bodyHeight && spectoggle) {
+                    //                    var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
+                    //                    $('#batterylife').animateNumber({number: 350, numberStep: comma_separator_number_step}, 5000);
+                    //                }
 
-            }
-            sideBarDisplay(data.curTop);
-        },
-        forceHeight:false,
-        smoothScrolling:true
+                }
+                sideBarDisplay(data.curTop);
+            },
+            forceHeight: false,
+            smoothScrolling: true
 
-    });
+        });
+    }
     $('#scrolling').localScroll(800);
     $('#dot-nav-bar').localScroll({
         duration:800,
