@@ -565,6 +565,11 @@ nav{
 #inthebox-container{
     margin: 50px 0;
 }
+#twoearbuds .description{
+    margin: 0 auto;
+    
+    float: none;
+}
 .right-container h3{
     font-size:0.9em;
     margin: 5px 0 10px 0;
