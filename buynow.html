@@ -401,38 +401,51 @@
         parallaxContainer();
     });
 
-    var finish= 0,wire= 0,receive=0;
+    var finish= 0,wire= 0;
     function updatePriceFinishType(optionBox,price){
         $('.finishType').removeClass('active');
         $(optionBox).addClass('active');
         finish = price;
-        $("#price").text('Price: S$'+(finish+wire+receive));
+        $("#price").text('Price: S$'+(finish+wire));
         $('#pay').addClass('active');
     }
     function updatePriceWireType(optionBox,price){
         $('.wireType').removeClass('active');
         $(optionBox).addClass('active');
         wire = price;
-        $("#price").text('Price: S$'+(finish+wire+receive));
+        $("#price").text('Price: S$'+(finish+wire));
         $('#pay').addClass('active');
     }
-    function updatePriceReceiveType(optionBox,price){
-        $('.receiveType').removeClass('active');
-        $(optionBox).addClass('active');
-        receive = price;
-        $("#price").text('Price: S$'+(finish+wire+receive));
-        $('#pay').addClass('active');
-    }
-//    $('#pay').click(function(){
-//        $( ".finishType" ).each(function( index ) {
-//            var className = $(this).attr('class').split(/\s+/);
-//            if(jQuery.inArray( "active", className ) == 1){
-//                return false;
-//            }else{
-//                alert('missing');
-//            }
-//        });
-//    });
+    $('#pay').click(function(){
+        var finish=false,wire=false;
+        var message = "Please select a ";
+        $( ".finishType" ).each(function( index ) {
+            var className = $(this).attr('class').split(/\s+/);
+            if(jQuery.inArray( "active", className ) == 1){
+                finish = true;
+            }
+        });
+        $( ".wireType" ).each(function( index ) {
+            var className = $(this).attr('class').split(/\s+/);
+            if(jQuery.inArray( "active", className ) == 1){
+                wire = true;
+            }
+        });
+        if(!finish){
+            message += "model ";
+            if(!wire){
+                message += "and "
+            }
+        }
+        if(!wire){
+            message += "wire type";
+        }
+        if(finish && wire){
+            alert("added to cart");
+        }else{
+            alert(message+".");
+        }
+    });
 </script>
 <!--end script-->
 </body>
