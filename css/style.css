@@ -11,7 +11,7 @@ a:hover{text-decoration: none;color: #71B6F2;}
 .bg{
     background-position: 50% 0;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -312,7 +312,7 @@ nav{
         width: 300px !important;
     }
     #slide-2 .bg {
-        background-position: 0 20%;
+        background-position: 0 110%;
         background-size: 500px 281px;
     }
     #dot-nav-bar {
@@ -438,6 +438,9 @@ nav{
     padding: 10px 20px 10px 20px;
     font-size: 1.6em;
     font-family: Abel, sans-serif;
+}
+#buynowicon a{
+    color:#fff;
 }
 #buynowicon:hover{
     border: 1px solid #73B9DD;
@@ -606,7 +609,7 @@ nav{
     top: 50%;
     left: 65%;
     width: 400px;
-    transform: translateX(-50%) translateY(-50%);
+    /* transform: translateX(-50%) translateY(-50%); */
 }
 #submenu{
     /* width: 400px; */
