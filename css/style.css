@@ -11,7 +11,7 @@ a:hover{text-decoration: none;color: #71B6F2;}
 .bg{
     background-position: 50% 0;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -284,6 +284,9 @@ nav{
 }
 /*for mobile*/
 @media(max-width: 767px){
+    .bg{
+          background-attachment: inherit;
+    }
     .navbar-right{
         /* margin-right:10%; */
         margin-top: 60px;
