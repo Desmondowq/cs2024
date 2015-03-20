@@ -764,8 +764,10 @@ a.active .option-text{
     color: #64BBF4;
 }
 #aboutus{
-    background-color: #222222;
-    padding: 40px 0;
+    background-color: #cccccc;
+    margin: 2px 0;
+    height: 240px;
+    overflow-y: hidden;
 }
 #footer{
     background-color: #222222;
@@ -860,4 +862,30 @@ video::-webkit-media-controls {
 }
 #chargingwire{
     width:320px;
+}
+#owl-demo{
+    height: 310px;
+}
+#owl-demo .item{
+    margin: 3px;
+}
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    opacity: 0;
+    overflow: hidden;
 }
