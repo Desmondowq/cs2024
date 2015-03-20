@@ -6,7 +6,7 @@ a:hover{text-decoration: none;color: #71B6F2;}
 .navbar{
     -webkit-box-shadow: 0px 20px 19px -13px rgba(0,0,0,0.31);
     -moz-box-shadow: 0px 20px 19px -13px rgba(0,0,0,0.31);
-    box-shadow: 0px 20px 19px -13px rgba(0,0,0,0.31);
+    box-shadow: 0px 20px 19px -13px rgba(0, 0, 0, 0.21);
 }
 .bg{
     background-position: 50% 0;
@@ -284,6 +284,9 @@ nav{
 }
 /*for mobile*/
 @media(max-width: 767px){
+    .bg{
+          background-attachment: inherit;
+    }
     .navbar-right{
         /* margin-right:10%; */
         margin-top: 60px;
@@ -312,7 +315,7 @@ nav{
         width: 300px !important;
     }
     #slide-2 .bg {
-        background-position: 0 20%;
+        background-position: 0 110%;
         background-size: 500px 281px;
     }
     #dot-nav-bar {
@@ -438,6 +441,9 @@ nav{
     padding: 10px 20px 10px 20px;
     font-size: 1.6em;
     font-family: Abel, sans-serif;
+}
+#buynowicon a{
+    color:#fff;
 }
 #buynowicon:hover{
     border: 1px solid #73B9DD;
@@ -606,7 +612,7 @@ nav{
     top: 50%;
     left: 65%;
     width: 400px;
-    transform: translateX(-50%) translateY(-50%);
+    /* transform: translateX(-50%) translateY(-50%); */
 }
 #submenu{
     /* width: 400px; */
@@ -680,6 +686,7 @@ nav{
 }
 .option-box{
     width: 150px;
+    height: 101px;
     padding: 10px 0 0 0;
     border: 1px solid #E8E8E8;
     border-radius: 10px;
@@ -694,9 +701,16 @@ nav{
     color: #7F7F7F;
     text-decoration:none;
 }
+.option-wire .option-box .option-text{
+    position: relative;
+    top: 45%;
+    transform: translateY(-45%);
+}
 .option-box img{
     vertical-align: baseline;
     margin-left: 38px;
+    width: 70px;
+    height: 65px;
 }
 .option-box:hover{
     background-color: #5F5F5F;
