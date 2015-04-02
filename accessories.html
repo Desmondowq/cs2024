@@ -22,6 +22,10 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!--End Fonts-->
+    <!--script-->
+    <script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.cookie.js"></script>
+    <!--end Script-->
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -47,7 +51,7 @@
 </nav>
 <div id="acc-price">
     <div id="acc-price-container">
-        <p align="right">Total Price: <span>$988.00/-</span><button class="btn-next" type="button">Next</button></p>
+        <p align="right">Total Price: <span id="total_price"></span><button id="btn-checkout" type="button">Checkout</button></p>
     </div>
 </div>
 <div id="main-container">
@@ -69,14 +73,30 @@
         <div class="clearfix"></div>
         <hr>
         <div id="accessories-container">
+            <!--<div class="accessories-item">-->
+                <!--<div class="accessories-description float_left">-->
+                    <!--<h1>Cover</h1>-->
+                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis nec lorem in venenatis. Quisque laoreet sapien in porttitor consectetur. In mattis mi eu turpis sollicitudin, non scelerisque turpis condimentum. Donec eu eleifend massa. Praesent fringilla cursus velit, non ultricies ligula porttitor sed. Nunc fermentum metus id eros scelerisque ultricies. Vivamus faucibus nisi at sapien rutrum euismod. Duis sed vulputate turpis.</p>-->
+                    <!--<p>$10.00</p>-->
+                    <!--<button title="warranty" data-value="10" class="btn_addcart">Add to Cart</button>-->
+                <!--</div>-->
+                <!--<div class="accessories-image float_right">-->
+                    <!--<center><img src="" width="364" height="284" /></center>-->
+                <!--</div>-->
+
+            <!--</div>-->
+
+            <div class="clearfix"></div>
+            <hr>
             <div class="accessories-item">
                 <div class="accessories-description float_left">
-                <h1>Warranty</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis nec lorem in venenatis. Quisque laoreet sapien in porttitor consectetur. In mattis mi eu turpis sollicitudin, non scelerisque turpis condimentum. Donec eu eleifend massa. Praesent fringilla cursus velit, non ultricies ligula porttitor sed. Nunc fermentum metus id eros scelerisque ultricies. Vivamus faucibus nisi at sapien rutrum euismod. Duis sed vulputate turpis.</p>
-                    <p>$10.00</p>
-            </div>
+                    <h1>Cleaning Cloth</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis nec lorem in venenatis. Quisque laoreet sapien in porttitor consectetur. In mattis mi eu turpis sollicitudin, non scelerisque turpis condimentum. Donec eu eleifend massa. Praesent fringilla cursus velit, non ultricies ligula porttitor sed. Nunc fermentum metus id eros scelerisque ultricies. Vivamus faucibus nisi at sapien rutrum euismod. Duis sed vulputate turpis.</p>
+                    <p>$20.00</p>
+                    <button title="cloth" data-value="20" class="btn_addcart">Add to Cart</button>
+                </div>
                 <div class="accessories-image float_right">
-
+                    <center><img src="" width="364" height="284" /></center>
                 </div>
 
             </div>
@@ -85,46 +105,53 @@
             <hr>
             <div class="accessories-item">
                 <div class="accessories-description float_left">
-                <h1>Cleaning Cloth</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis nec lorem in venenatis. Quisque laoreet sapien in porttitor consectetur. In mattis mi eu turpis sollicitudin, non scelerisque turpis condimentum. Donec eu eleifend massa. Praesent fringilla cursus velit, non ultricies ligula porttitor sed. Nunc fermentum metus id eros scelerisque ultricies. Vivamus faucibus nisi at sapien rutrum euismod. Duis sed vulputate turpis.</p>
-                    <p>$10.00</p>
-            </div>
-                <div class="accessories-image float_right">
-
+                    <h1>Fibre Cleaning Liquid Solution</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis nec lorem in venenatis. Quisque laoreet sapien in porttitor consectetur. In mattis mi eu turpis sollicitudin, non scelerisque turpis condimentum. Donec eu eleifend massa. Praesent fringilla cursus velit, non ultricies ligula porttitor sed. Nunc fermentum metus id eros scelerisque ultricies. Vivamus faucibus nisi at sapien rutrum euismod. Duis sed vulputate turpis.</p>
+                    <p>$30.00</p>
+                    <button title="liquid" data-value="30" class="btn_addcart">Add to Cart</button>
                 </div>
-
-            </div>
-
-            <div class="clearfix"></div>
-            <hr>
-            <div class="accessories-item">
-                <div class="accessories-description float_left">
-                <h1>Fibre Cleaning Liquid Solution</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis nec lorem in venenatis. Quisque laoreet sapien in porttitor consectetur. In mattis mi eu turpis sollicitudin, non scelerisque turpis condimentum. Donec eu eleifend massa. Praesent fringilla cursus velit, non ultricies ligula porttitor sed. Nunc fermentum metus id eros scelerisque ultricies. Vivamus faucibus nisi at sapien rutrum euismod. Duis sed vulputate turpis.</p>
-                    <p>$10.00</p>
-            </div>
                 <div class="accessories-image float_right">
-
+                    <center><img src="" width="364" height="284" /></center>
                 </div>
 
             </div>
 
             <div class="clearfix"></div>
         </div>
-        <div class="next"></div>
     </div>
 </div>
+<div id="animate_block"></div>
 <!--script-->
-<script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.scrollTo.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.localScroll.min.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-<script type="text/javascript" src="scripts/color2color.min.js"></script>
-<script type="text/javascript" src="scripts/app.js"></script>
-<script type="text/javascript" src="scripts/jquery.animateNumber.min.js"></script>
-<script type="text/javascript" src="scripts/owl.carousel.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.magnific-popup.min.js"></script>
-<script src="scripts/skrollr.min.js"></script>
 <script src="scripts/custom.js"></script>
+<script>
+    $( ".btn_addcart" ).click(function() {
+        $("#animate_block").css('top',$(this).offset().top+"px").css('left',$(this).offset().left+"px").css('opacity',"1").css('width','93px').css('height','34px');
+        var price = $("#total_price").offset();
+        $( "#animate_block" ).animate({
+            top:price.top+"px",
+            left:price.left+"px",
+            width:0,
+            height:0,
+            opacity:"0.8"
+        }, 500).animate({
+           opacity:"0"
+        },200);
+        if($.cookie($(this).attr("title")) != null){
+            var number = parseInt($.cookie($(this).attr("title")));
+            $.cookie($(this).attr("title"), number+1);
+        }else{
+            $.cookie($(this).attr("title"), 1);
+        }
+        console.log();
+        var totalprice=parseInt($("#total_price").text().replace('S$',''))+parseInt($(this).attr("data-value"));
+        $("#total_price").text("S$"+totalprice);
+        $.cookie('totalPrice',totalprice);
+    });
+    $("#total_price").text("S$"+$.cookie('totalPrice'));
+    $("#btn-checkout").click(function(){
+        window.location = "cart.html"
+    });
+</script>
 </body>
 </html>

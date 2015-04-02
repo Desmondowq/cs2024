@@ -22,6 +22,50 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <!--End Fonts-->
+    <!--script-->
+    <script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var item = {chromiumStandard:476, chromiumFullColor:497, goldStandard:486,goldFullColor:507,liquid:30,cloth:20};
+            var totalprice= 0,subtotal=0;
+            for (var key in item) {
+                if($.cookie(key) != null){
+                    $('#'+key).show();
+                    $('#'+key+'Price').text("S$"+parseFloat(item[key]).toFixed(2));
+                    $('#'+key+'Qty').val($.cookie(key));
+                    totalprice += parseInt($.cookie(key))*item[key];
+                    $('#'+key+'TotalPrice').text("S$"+parseFloat(parseInt($.cookie(key))*item[key]).toFixed(2));
+                }
+            }
+            subtotal = totalprice;
+            $("#subtotal").text("S$"+parseFloat(subtotal).toFixed(2));
+            $("#totalprice").text("S$"+parseFloat(totalprice).toFixed(2));
+            $(".cart-item-input").change(function(){
+                var name = $(this).attr('id').replace('Qty','');
+                if($(this).val()==0){
+                    $.removeCookie(name);
+                }else{
+                    $.cookie(name,$(this).val());
+                }
+                window.location = "cart.html";
+            });
+            $(".remove-cart-item").click(function(){
+                var name = $(this).attr('id').replace('Remove','');
+                $.removeCookie(name);
+                window.location = "cart.html";
+            });
+            $("#cart-checkout").click(function(){
+                for (var key in item) {
+                    $.removeCookie(key);
+                    $.removeCookie('totalPrice');
+                }
+                alert("You have successful checkout");
+                window.location = "index.html";
+            });
+        });
+    </script>
+    <!--end Script-->
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -47,20 +91,225 @@
 </nav>
 <div id="main-container">
     <div id="cart">
-
+        <div id="cart-progressbar">
+            <div id="progressbar-container">
+                <div class="checkout-wrap">
+                    <ul class="checkout-bar">
+                        <li class="visited">Select Model</li>
+                        <li class="previous visited">Select Accessories</li>
+                        <li class="last">Checkout</li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        <hr>
+        <div id="cart-container">
+            <div id="cart-title">
+                <p>In Your Cart</p>
+                <hr>
+            </div>
+            <div class="cart-item" id="chromiumStandard">
+                <div class="cart-image float_left">
+                    <img src="" width="110" height="78">
+                </div>
+                <div class="cart-description float_left">
+                    <div class="cart-item-title float_left">
+                        <h4><b>CHROMIUM & Standard Color Wire</b></h4>
+                    </div>
+                    <div class="cart-item-price-per float_left">
+                        <p id="chromiumStandardPrice"></p>
+                    </div>
+                    <div class="cart-item-qty float_left">
+                        <input id="chromiumStandardQty" type="text" value="1" class="cart-item-input"/>
+                    </div>
+                    <div class="cart-item-price float_left">
+                        <p id="chromiumStandardTotalPrice"></p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div class="float_right">
+                    <a href="#" id="chromiumStandardRemove" class="remove-cart-item">Remove</a>
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+            </div>
+            <div class="cart-item" id="chromiumFullColor">
+                <div class="cart-image float_left">
+                    <img src="" width="110" height="78">
+                </div>
+                <div class="cart-description float_left">
+                    <div class="cart-item-title float_left">
+                        <h4><b>CHROMIUM & Epic Color Wire</b></h4>
+                    </div>
+                    <div class="cart-item-price-per float_left">
+                        <p id="chromiumFullColorPrice"></p>
+                    </div>
+                    <div class="cart-item-qty float_left">
+                        <input id="chromiumFullColorQty" type="text" value="1" class="cart-item-input"/>
+                    </div>
+                    <div class="cart-item-price float_left">
+                        <p id="chromiumFullColorTotalPrice"></p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div class="float_right">
+                    <a href="#" id="chromiumFullColorRemove" class="remove-cart-item">Remove</a>
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+            </div>
+            <div class="cart-item" id="goldStandard">
+                <div class="cart-image float_left">
+                    <img src="" width="110" height="78">
+                </div>
+                <div class="cart-description float_left">
+                    <div class="cart-item-title float_left">
+                        <h4><b>Gold & Standard Wire</b></h4>
+                    </div>
+                    <div class="cart-item-price-per float_left">
+                        <p id="goldStandardPrice"></p>
+                    </div>
+                    <div class="cart-item-qty float_left">
+                        <input id="goldStandardQty" type="text" value="1" class="cart-item-input"/>
+                    </div>
+                    <div class="cart-item-price float_left">
+                        <p id="goldStandardTotalPrice"></p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div class="float_right">
+                    <a href="#" id="goldStandardRemove" class="remove-cart-item">Remove</a>
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+            </div>
+            <div class="cart-item" id="goldFullColor">
+                <div class="cart-image float_left">
+                    <img src="" width="110" height="78">
+                </div>
+                <div class="cart-description float_left">
+                    <div class="cart-item-title float_left">
+                        <h4><b>Gold & Epic Color wire</b></h4>
+                    </div>
+                    <div class="cart-item-price-per float_left">
+                        <p id="goldFullColorPrice"></p>
+                    </div>
+                    <div class="cart-item-qty float_left">
+                        <input id="goldFullColorQty" type="text" value="1" class="cart-item-input"/>
+                    </div>
+                    <div class="cart-item-price float_left">
+                        <p id="goldFullColorTotalPrice"></p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div class="float_right">
+                    <a href="#" id="goldFullColorRemove" class="remove-cart-item">Remove</a>
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+            </div>
+            <div class="cart-item" id="cloth">
+                <div class="cart-image float_left">
+                    <img src="" width="110" height="78">
+                </div>
+                <div class="cart-description float_left">
+                    <div class="cart-item-title float_left">
+                        <h4><b>Cloth</b></h4>
+                    </div>
+                    <div class="cart-item-price-per float_left">
+                        <p id="clothPrice"></p>
+                    </div>
+                    <div class="cart-item-qty float_left">
+                        <input id="clothQty" type="text" value="1" class="cart-item-input"/>
+                    </div>
+                    <div class="cart-item-price float_left">
+                        <p id="clothTotalPrice"></p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div class="float_right">
+                    <a href="#" id="clothRemove" class="remove-cart-item">Remove</a>
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+            </div>
+            <div class="cart-item" id="liquid">
+                <div class="cart-image float_left">
+                    <img src="" width="110" height="78">
+                </div>
+                <div class="cart-description float_left">
+                    <div class="cart-item-title float_left">
+                        <h4><b>Liquid Solution</b></h4>
+                    </div>
+                    <div class="cart-item-price-per float_left">
+                        <p id="liquidPrice"></p>
+                    </div>
+                    <div class="cart-item-qty float_left">
+                        <input id="liquidQty" type="text" value="1" class="cart-item-input"/>
+                    </div>
+                    <div class="cart-item-price float_left">
+                        <p id="liquidTotalPrice"></p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div class="float_right">
+                    <a href="#" id="liquidRemove" class="remove-cart-item">Remove</a>
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+            </div>
+            <div id="total-cart-content" >
+                <table class="float_right">
+                    <tr>
+                        <td width="120" align="right">Cart subtotal</td>
+                        <td width="100" align="center" id="subtotal"></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Free Delivery</td>
+                        <td align="center">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td align="right">Total</td>
+                        <td align="center" id="totalprice"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">GST included</td>
+                    </tr>
+                </table>
+                <div class="clearfix"></div>
+                <hr>
+            </div>
+            <div class="clearfix"></div>
+            <div id="cart-total">
+                <button><a href="">Continue Shopping</a></button>
+                <button  type="button" id="cart-checkout">Checkout</button>
+            </div>
+        </div>
+            </div>
+    <div id="cart-faq">
+        <div>
+            <h3><b>Question</b></h3>
+        </div>
+        <h4>What is Lorem Ipsum</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <h4>What is Lorem Ipsum</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <h4>What is Lorem Ipsum</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     </div>
 </div>
 <!--script-->
-<script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.scrollTo.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.localScroll.min.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-<script type="text/javascript" src="scripts/color2color.min.js"></script>
-<script type="text/javascript" src="scripts/app.js"></script>
-<script type="text/javascript" src="scripts/jquery.animateNumber.min.js"></script>
-<script type="text/javascript" src="scripts/owl.carousel.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.magnific-popup.min.js"></script>
-<script src="scripts/skrollr.min.js"></script>
 <script src="scripts/custom.js"></script>
 </body>
 </html>
