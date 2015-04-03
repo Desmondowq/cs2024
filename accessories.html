@@ -41,10 +41,10 @@
         <div id="menu-logo" data-start="background-size: 0px 0px;" data-370-start="background-size: 60px 60px;" data-390-start="background-size: 50px 50px;"></div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul id="scrolling" class="nav navbar-nav navbar-right">
-                <li><a href="#slide-1">AIRBUD</a></li>
+                <li><a href="index.html">AIRBUD</a></li>
                 <li><a href="buynow.html">BUY NOW</a></li>
-                <li><a href="#faq-section">FAQ</a></li>
-                <li><a href="#slide-7">CONTACT US</a></li>
+                <li><a href="index.html#faq-section">FAQ</a></li>
+                <li><a href="index.html#slide-7">CONTACT US</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -143,12 +143,11 @@
         }else{
             $.cookie($(this).attr("title"), 1);
         }
-        console.log();
         var totalprice=parseInt($("#total_price").text().replace('S$',''))+parseInt($(this).attr("data-value"));
-        $("#total_price").text("S$"+totalprice);
+        $("#total_price").text("S$"+parseFloat(totalprice).toFixed(2));
         $.cookie('totalPrice',totalprice);
     });
-    $("#total_price").text("S$"+$.cookie('totalPrice'));
+    $("#total_price").text("S$"+parseFloat($.cookie('totalPrice')).toFixed(2));
     $("#btn-checkout").click(function(){
         window.location = "cart.html"
     });

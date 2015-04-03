@@ -28,7 +28,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             var item = {chromiumStandard:476, chromiumFullColor:497, goldStandard:486,goldFullColor:507,liquid:30,cloth:20};
-            var totalprice= 0,subtotal=0;
+            var totalprice= 0,subtotal= 0,empty=false;
             for (var key in item) {
                 if($.cookie(key) != null){
                     $('#'+key).show();
@@ -36,7 +36,11 @@
                     $('#'+key+'Qty').val($.cookie(key));
                     totalprice += parseInt($.cookie(key))*item[key];
                     $('#'+key+'TotalPrice').text("S$"+parseFloat(parseInt($.cookie(key))*item[key]).toFixed(2));
+                    empty=true;
                 }
+            }
+            if(empty == false){
+                window.location = "index.html";
             }
             subtotal = totalprice;
             $("#subtotal").text("S$"+parseFloat(subtotal).toFixed(2));
@@ -81,10 +85,10 @@
         <div id="menu-logo" data-start="background-size: 0px 0px;" data-370-start="background-size: 60px 60px;" data-390-start="background-size: 50px 50px;"></div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul id="scrolling" class="nav navbar-nav navbar-right">
-                <li><a href="#slide-1">AIRBUD</a></li>
+                <li><a href="index.html">AIRBUD</a></li>
                 <li><a href="buynow.html">BUY NOW</a></li>
-                <li><a href="#faq-section">FAQ</a></li>
-                <li><a href="#slide-7">CONTACT US</a></li>
+                <li><a href="index.html#faq-section">FAQ</a></li>
+                <li><a href="index.html#slide-7">CONTACT US</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -291,8 +295,8 @@
             </div>
             <div class="clearfix"></div>
             <div id="cart-total">
-                <button><a href="">Continue Shopping</a></button>
-                <button  type="button" id="cart-checkout">Checkout</button>
+                <button class="white-btn"><a href="buynow.html">Continue Shopping</a></button>
+                <button type="button" id="cart-checkout">Checkout</button>
             </div>
         </div>
             </div>

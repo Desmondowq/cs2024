@@ -215,7 +215,7 @@
                 </a>
             </div>-->
             <h3 class="slideInDown deliverynote" >Free delivery with 2 years warranty</h3>
-            <div id="price" class="slideInUp">Price From S$148</div>
+            <div id="price" class="slideInUp">Price:</div>
             <div class="buybox">
                 <button type="button" class="btn btn-default slideInUp" id="pay">Select</button>
             </div>
@@ -408,7 +408,7 @@
         $('.finishType').removeClass('active');
         $(optionBox).addClass('active');
         priceFinish = price;
-        $("#price").text('Price: S$'+(priceFinish+priceWire));
+        $("#price").text('Price: S$'+(parseFloat(priceFinish+priceWire).toFixed(2)));
         $( ".wireType" ).each(function( index ) {
             var className = $(this).attr('class').split(/\s+/);
             if(jQuery.inArray( "active", className ) == 1){
@@ -421,7 +421,7 @@
         $('.wireType').removeClass('active');
         $(optionBox).addClass('active');
         priceWire = price;
-        $("#price").text('Price: S$'+(priceFinish+priceWire));
+        $("#price").text('Price: S$'+(parseFloat(priceFinish+priceWire).toFixed(2)));
         $( ".finishType" ).each(function( index ) {
         var className = $(this).attr('class').split(/\s+/);
             if(jQuery.inArray( "active", className ) == 1){
