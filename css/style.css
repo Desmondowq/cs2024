@@ -206,6 +206,7 @@ video{
 .cell_message{
     font-size: 1.10em;
     font-family: 'Open Sans', sans-serif;
+    line-height: 18pt;
     color: #BABABA;
 }
 #app-container{
@@ -446,11 +447,11 @@ nav{
     color:#fff;
 }
 #buynowicon:hover{
-    border: 1px solid #73B9DD;
+    border: 1px solid #00A8FF;
     -webkit-transition: border 1s;
 }
 #buynowicon:hover a{
-    color: #42D4FF;
+    color: #00A8FF;
     -webkit-transition: color 1s;
 }
 #contactus{
@@ -468,13 +469,13 @@ nav{
 }
 .spec_indi{
     font-size: 3.65em;
-    font-weight: 300;
+    font-weight: 200;
     font-family: 'Open Sans', sans-serif;
-    color: #03CCFF;;
+    color: #161A64;;
 }
 .spec_desc {
     font-size: 1.125em;
-    color: #4A5C6D;
+    color: #3C3F42;
 }
 #main-container{
     width:960px;
@@ -1296,6 +1297,14 @@ ul.checkout-bar a {
     background-image: -o-linear-gradient(top, #cccccc, #fdfdfd);
     background-image: linear-gradient(to bottom, #cccccc, #fdfdfd);
     text-decoration: none;
+}
+h1.sound {
+    font-weight:100;
+}
+
+p.sou {
+    color: #797979;
+    line-height: 16pt;
 }
 .modal-alert{
     color: #ce4844;
