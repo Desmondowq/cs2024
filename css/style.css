@@ -1297,3 +1297,6 @@ ul.checkout-bar a {
     background-image: linear-gradient(to bottom, #cccccc, #fdfdfd);
     text-decoration: none;
 }
+.modal-alert{
+    color: #ce4844;
+}

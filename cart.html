@@ -27,7 +27,17 @@
     <script type="text/javascript" src="scripts/jquery.cookie.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            var item = {chromiumStandard:476, chromiumFullColor:497, goldStandard:486,goldFullColor:507,liquid:30,cloth:20};
+            var item = {chromiumStandard:476, chromiumFullColor:497, goldStandard:486,goldFullColor:507,cloth:20,liquid:30};
+
+            //setup form price
+            $('[name="amount_1"]').val(item.chromiumStandard);
+            $('[name="amount_2"]').val(item.chromiumFullColor);
+            $('[name="amount_3"]').val(item.goldStandard);
+            $('[name="amount_4"]').val(item.goldFullColor);
+            $('[name="amount_5"]').val(item.liquid);
+            $('[name="amount_6"]').val(item.cloth);
+
+
             var totalprice= 0,subtotal= 0,empty=false;
             for (var key in item) {
                 if($.cookie(key) != null){
@@ -64,8 +74,10 @@
                     $.removeCookie(key);
                     $.removeCookie('totalPrice');
                 }
-                alert("You have successful checkout");
-                window.location = "index.html";
+                $('#myModal .modal-body').html("Transferring to payment processor...");
+                $('#myModal').modal('show');
+                $('#paypal').submit();
+                //window.location = "index.html";
             });
         });
     </script>
@@ -94,212 +106,229 @@
     </div>
 </nav>
 <div id="main-container">
-    <div id="cart">
-        <div id="cart-progressbar">
-            <div id="progressbar-container">
-                <div class="checkout-wrap">
-                    <ul class="checkout-bar">
-                        <li class="visited">Select Model</li>
-                        <li class="previous visited">Select Accessories</li>
-                        <li class="last">Checkout</li>
-                    </ul>
+    <form id="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="upload" value="1">
+        <input type="hidden" name="business" value="seller@dezignerfotos.com">
+        <div id="cart">
+            <div id="cart-progressbar">
+                <div id="progressbar-container">
+                    <div class="checkout-wrap">
+                        <ul class="checkout-bar">
+                            <li class="visited">Select Model</li>
+                            <li class="previous visited">Select Accessories</li>
+                            <li class="last">Checkout</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
+            <hr>
+            <div id="cart-container">
+                <div id="cart-title">
+                    <p>In Your Cart</p>
+                    <hr>
+                </div>
+                <div class="cart-item" id="chromiumStandard">
+                    <div class="cart-image float_left">
+                        <img src="" width="110" height="78">
+                    </div>
+                    <div class="cart-description float_left">
+                        <div class="cart-item-title float_left">
+                            <h4><b>CHROMIUM & Standard Color Wire</b></h4>
+                        </div>
+                        <div class="cart-item-price-per float_left">
+                            <p id="chromiumStandardPrice"></p>
+                        </div>
+                        <div class="cart-item-qty float_left">
+                            <input type="hidden" name="item_name_1" value="Chromium Standard">
+                            <input id="chromiumStandardQty" name="quantity_1" type="text" value="" class="cart-item-input"/>
+                            <input type="hidden" name="amount_1" value="">
+                        </div>
+                        <div class="cart-item-price float_left">
+                            <p id="chromiumStandardTotalPrice"></p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="float_right">
+                        <a href="#" id="chromiumStandardRemove" class="remove-cart-item">Remove</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div class="cart-item" id="chromiumFullColor">
+                    <div class="cart-image float_left">
+                        <img src="" width="110" height="78">
+                    </div>
+                    <div class="cart-description float_left">
+                        <div class="cart-item-title float_left">
+                            <h4><b>CHROMIUM & Epic Color Wire</b></h4>
+                        </div>
+                        <div class="cart-item-price-per float_left">
+                            <p id="chromiumFullColorPrice"></p>
+                        </div>
+                        <div class="cart-item-qty float_left">
+                            <input type="hidden" name="item_name_2" value="Chromium Full Spectrum">
+                            <input id="chromiumFullColorQty" name="quantity_2" type="text" value="" class="cart-item-input"/>
+                            <input type="hidden" name="amount_2" value="">
+                        </div>
+                        <div class="cart-item-price float_left">
+                            <p id="chromiumFullColorTotalPrice"></p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="float_right">
+                        <a href="#" id="chromiumFullColorRemove" class="remove-cart-item">Remove</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div class="cart-item" id="goldStandard">
+                    <div class="cart-image float_left">
+                        <img src="" width="110" height="78">
+                    </div>
+                    <div class="cart-description float_left">
+                        <div class="cart-item-title float_left">
+                            <h4><b>Gold & Standard Wire</b></h4>
+                        </div>
+                        <div class="cart-item-price-per float_left">
+                            <p id="goldStandardPrice"></p>
+                        </div>
+                        <div class="cart-item-qty float_left">
+                            <input type="hidden" name="item_name_3" value="Gold Standard">
+                            <input id="goldStandardQty" name="quantity_3" type="text" value="" class="cart-item-input"/>
+                            <input type="hidden" name="amount_3" value="">
+                        </div>
+                        <div class="cart-item-price float_left">
+                            <p id="goldStandardTotalPrice"></p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="float_right">
+                        <a href="#" id="goldStandardRemove" class="remove-cart-item">Remove</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div class="cart-item" id="goldFullColor">
+                    <div class="cart-image float_left">
+                        <img src="" width="110" height="78">
+                    </div>
+                    <div class="cart-description float_left">
+                        <div class="cart-item-title float_left">
+                            <h4><b>Gold & Epic Color wire</b></h4>
+                        </div>
+                        <div class="cart-item-price-per float_left">
+                            <p id="goldFullColorPrice"></p>
+                        </div>
+                        <div class="cart-item-qty float_left">
+                            <input type="hidden" name="item_name_4" value="Gold Full Spectrum">
+                            <input id="goldFullColorQty" name="quantity_4" type="text" value="" class="cart-item-input"/>
+                            <input type="hidden" name="amount_4" value="">
+                        </div>
+                        <div class="cart-item-price float_left">
+                            <p id="goldFullColorTotalPrice"></p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="float_right">
+                        <a href="#" id="goldFullColorRemove" class="remove-cart-item">Remove</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div class="cart-item" id="cloth">
+                    <div class="cart-image float_left">
+                        <img src="" width="110" height="78">
+                    </div>
+                    <div class="cart-description float_left">
+                        <div class="cart-item-title float_left">
+                            <h4><b>Cloth</b></h4>
+                        </div>
+                        <div class="cart-item-price-per float_left">
+                            <p id="clothPrice"></p>
+                        </div>
+                        <div class="cart-item-qty float_left">
+                            <input type="hidden" name="item_name_5" value="Cloth">
+                            <input id="clothQty" name="quantity_5" type="text" value="" class="cart-item-input"/>
+                            <input type="hidden" name="amount_5" value="">
+                        </div>
+                        <div class="cart-item-price float_left">
+                            <p id="clothTotalPrice"></p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="float_right">
+                        <a href="#" id="clothRemove" class="remove-cart-item">Remove</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div class="cart-item" id="liquid">
+                    <div class="cart-image float_left">
+                        <img src="" width="110" height="78">
+                    </div>
+                    <div class="cart-description float_left">
+                        <div class="cart-item-title float_left">
+                            <h4><b>Liquid Solution</b></h4>
+                        </div>
+                        <div class="cart-item-price-per float_left">
+                            <p id="liquidPrice"></p>
+                        </div>
+                        <div class="cart-item-qty float_left">
+                            <input type="hidden" name="item_name_6" value="Liquid">
+                            <input id="liquidQty" name="quantity_6" type="text" value="" class="cart-item-input"/>
+                            <input type="hidden" name="amount_6" value="">
+                        </div>
+                        <div class="cart-item-price float_left">
+                            <p id="liquidTotalPrice"></p>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="float_right">
+                        <a href="#" id="liquidRemove" class="remove-cart-item">Remove</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div id="total-cart-content" >
+                    <table class="float_right">
+                        <tr>
+                            <td width="120" align="right">Cart subtotal</td>
+                            <td width="100" align="center" id="subtotal"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Free Delivery</td>
+                            <td align="center">$0.00</td>
+                        </tr>
+                        <tr>
+                            <td align="right">Total</td>
+                            <td align="center" id="totalprice"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">GST included</td>
+                        </tr>
+                    </table>
+                    <div class="clearfix"></div>
+                    <hr>
+                </div>
+                <div class="clearfix"></div>
+                <div id="cart-total">
+                    <button class="white-btn"><a href="buynow.html">Continue Shopping</a></button>
+                    <button type="button" id="cart-checkout">Checkout</button>
+                </div>
+            </div>
         </div>
-        <div class="clearfix"></div>
-        <hr>
-        <div id="cart-container">
-            <div id="cart-title">
-                <p>In Your Cart</p>
-                <hr>
-            </div>
-            <div class="cart-item" id="chromiumStandard">
-                <div class="cart-image float_left">
-                    <img src="" width="110" height="78">
-                </div>
-                <div class="cart-description float_left">
-                    <div class="cart-item-title float_left">
-                        <h4><b>CHROMIUM & Standard Color Wire</b></h4>
-                    </div>
-                    <div class="cart-item-price-per float_left">
-                        <p id="chromiumStandardPrice"></p>
-                    </div>
-                    <div class="cart-item-qty float_left">
-                        <input id="chromiumStandardQty" type="text" value="1" class="cart-item-input"/>
-                    </div>
-                    <div class="cart-item-price float_left">
-                        <p id="chromiumStandardTotalPrice"></p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <hr>
-                </div>
-                <div class="float_right">
-                    <a href="#" id="chromiumStandardRemove" class="remove-cart-item">Remove</a>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="cart-item" id="chromiumFullColor">
-                <div class="cart-image float_left">
-                    <img src="" width="110" height="78">
-                </div>
-                <div class="cart-description float_left">
-                    <div class="cart-item-title float_left">
-                        <h4><b>CHROMIUM & Epic Color Wire</b></h4>
-                    </div>
-                    <div class="cart-item-price-per float_left">
-                        <p id="chromiumFullColorPrice"></p>
-                    </div>
-                    <div class="cart-item-qty float_left">
-                        <input id="chromiumFullColorQty" type="text" value="1" class="cart-item-input"/>
-                    </div>
-                    <div class="cart-item-price float_left">
-                        <p id="chromiumFullColorTotalPrice"></p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <hr>
-                </div>
-                <div class="float_right">
-                    <a href="#" id="chromiumFullColorRemove" class="remove-cart-item">Remove</a>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="cart-item" id="goldStandard">
-                <div class="cart-image float_left">
-                    <img src="" width="110" height="78">
-                </div>
-                <div class="cart-description float_left">
-                    <div class="cart-item-title float_left">
-                        <h4><b>Gold & Standard Wire</b></h4>
-                    </div>
-                    <div class="cart-item-price-per float_left">
-                        <p id="goldStandardPrice"></p>
-                    </div>
-                    <div class="cart-item-qty float_left">
-                        <input id="goldStandardQty" type="text" value="1" class="cart-item-input"/>
-                    </div>
-                    <div class="cart-item-price float_left">
-                        <p id="goldStandardTotalPrice"></p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <hr>
-                </div>
-                <div class="float_right">
-                    <a href="#" id="goldStandardRemove" class="remove-cart-item">Remove</a>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="cart-item" id="goldFullColor">
-                <div class="cart-image float_left">
-                    <img src="" width="110" height="78">
-                </div>
-                <div class="cart-description float_left">
-                    <div class="cart-item-title float_left">
-                        <h4><b>Gold & Epic Color wire</b></h4>
-                    </div>
-                    <div class="cart-item-price-per float_left">
-                        <p id="goldFullColorPrice"></p>
-                    </div>
-                    <div class="cart-item-qty float_left">
-                        <input id="goldFullColorQty" type="text" value="1" class="cart-item-input"/>
-                    </div>
-                    <div class="cart-item-price float_left">
-                        <p id="goldFullColorTotalPrice"></p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <hr>
-                </div>
-                <div class="float_right">
-                    <a href="#" id="goldFullColorRemove" class="remove-cart-item">Remove</a>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="cart-item" id="cloth">
-                <div class="cart-image float_left">
-                    <img src="" width="110" height="78">
-                </div>
-                <div class="cart-description float_left">
-                    <div class="cart-item-title float_left">
-                        <h4><b>Cloth</b></h4>
-                    </div>
-                    <div class="cart-item-price-per float_left">
-                        <p id="clothPrice"></p>
-                    </div>
-                    <div class="cart-item-qty float_left">
-                        <input id="clothQty" type="text" value="1" class="cart-item-input"/>
-                    </div>
-                    <div class="cart-item-price float_left">
-                        <p id="clothTotalPrice"></p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <hr>
-                </div>
-                <div class="float_right">
-                    <a href="#" id="clothRemove" class="remove-cart-item">Remove</a>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="cart-item" id="liquid">
-                <div class="cart-image float_left">
-                    <img src="" width="110" height="78">
-                </div>
-                <div class="cart-description float_left">
-                    <div class="cart-item-title float_left">
-                        <h4><b>Liquid Solution</b></h4>
-                    </div>
-                    <div class="cart-item-price-per float_left">
-                        <p id="liquidPrice"></p>
-                    </div>
-                    <div class="cart-item-qty float_left">
-                        <input id="liquidQty" type="text" value="1" class="cart-item-input"/>
-                    </div>
-                    <div class="cart-item-price float_left">
-                        <p id="liquidTotalPrice"></p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <hr>
-                </div>
-                <div class="float_right">
-                    <a href="#" id="liquidRemove" class="remove-cart-item">Remove</a>
-                </div>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div id="total-cart-content" >
-                <table class="float_right">
-                    <tr>
-                        <td width="120" align="right">Cart subtotal</td>
-                        <td width="100" align="center" id="subtotal"></td>
-                    </tr>
-                    <tr>
-                        <td align="right">Free Delivery</td>
-                        <td align="center">$0.00</td>
-                    </tr>
-                    <tr>
-                        <td align="right">Total</td>
-                        <td align="center" id="totalprice"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" align="center">GST included</td>
-                    </tr>
-                </table>
-                <div class="clearfix"></div>
-                <hr>
-            </div>
-            <div class="clearfix"></div>
-            <div id="cart-total">
-                <button class="white-btn"><a href="buynow.html">Continue Shopping</a></button>
-                <button type="button" id="cart-checkout">Checkout</button>
-            </div>
-        </div>
-            </div>
+    </form>
     <div id="cart-faq">
         <div>
             <h3><b>Question</b></h3>
@@ -310,6 +339,23 @@
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         <h4>What is Lorem Ipsum</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title modal-info" id="myModalLabel"><i class="fa fa-exclamation-triangle"></i> Checkout</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!--script-->
