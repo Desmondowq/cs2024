@@ -813,6 +813,7 @@ a.active .option-text{
     font-weight: 900;
     font-size: 40px;
     line-height: 60px;
+    margin-top: 0px;
     letter-spacing: -1px;
     margin-bottom: 0;
     color: #25292C;
@@ -1492,4 +1493,7 @@ footer .footer .form-control:focus {
     font-weight: normal;
     letter-spacing: 0.2em;
     border-top: 1px solid rgba(114, 114, 114, 0.25);
+}
+p.copy {
+    margin-left: 20px;
 }
