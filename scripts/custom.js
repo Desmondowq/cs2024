@@ -1,6 +1,3 @@
-/**
- * Created by Desmond on 10/3/2015.
- */
 function parallaxContainer(){
     var bodyWidth = $(window).width();
     if(bodyWidth < 450){
