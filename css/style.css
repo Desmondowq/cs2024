@@ -1500,7 +1500,6 @@ p.copy {
 /*------Whats In the Bag--------*/
 #overview {
     margin: 0px;
-    padding-top: 6.5rem;
     padding-bottom: 0rem;
     min-height: 50rem;
     max-height: 70rem;
@@ -1530,9 +1529,9 @@ i.fa-3x {
     font-size: 3em;
 }
 h4.overview {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     margin-top: 20px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 300;
     line-height: 1.625rem;
 }
@@ -1549,23 +1548,20 @@ h4.overview {
     z-index: 2;
 }
 .section-title .title {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
-    font-size: 40px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2.6em;
     line-height: 60px;
     letter-spacing: -1px;
     margin-bottom: 0;
     color: #25292c;
 }
 .section-title .subtitle {
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 28px;
     margin-top: 0;
-    color: #999;
+    color: #084177;
+    line-height: 1.625em;   font-weight: 300;   font-size: 1.1em;
 }
 .main-color {
-    color: #4cddf3;
+    color: #333333;
 }
 .title-break {
     border-top: 3px solid #CCC;
@@ -1627,8 +1623,17 @@ i.fa-5x {
     border-color: #25292c;
 }
 h3.bag {
-    font-size: 1.5em;
-    font-family: 'Raleway', sans-serif;
+    font-size: 1.3em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #da2d2d;
+}
+#designws {
+    margin-top: 50px;
+
+    margin-bottom: 80px;
+}
+.awrd-color {
+    color: #158AD2;
 }
 /*------------Download--------------*/
 #download {
@@ -1644,16 +1649,6 @@ h3.bag {
 .row {
     margin-right: -15px;
     margin-left: -15px;
-}
-.fadeInDown {
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
-}
-.animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
 }
 .padding-left {
     padding-left: 90px;
@@ -1708,9 +1703,10 @@ i.fa.fa-2x {
     animation-name: bounceInRight;
 }
 h2.download {
-    font-size: 2.32em;
+    font-size: 2.5em;
     line-height: 3.6rem;
-    font-weight: 100;
+    font-weight: 400;
+    font-family: 'Open Sans Condensed', sans-serif;
     margin-bottom: 1.7rem;
 }
 p.download {
