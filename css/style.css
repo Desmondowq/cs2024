@@ -29,6 +29,10 @@ a:hover{text-decoration: none;color: #005D96;}
 .fixed{
     position:fixed;
 }
+.space {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 #slide-5{background-color: #151515;height: auto;}
 /*#slide-1 .bg{background:#fff;}*/
 #slide-2 .bg{background-image:url('../images/V3.3.jpg'); }
@@ -412,7 +416,19 @@ nav{
         width: 100% !important;
     
         margin-top: 45px;
-}
+    }
+    #about-left-content{
+        text-align: left;
+    }
+    #download-content{
+        padding: 15px;
+    }
+    .space{
+        padding: 20px;
+    }
+    #download-apple-store,#download-play-store{
+        margin: 0;
+    }
 }
 .navbar-right li{
     font-size: 1.35em;
@@ -1502,7 +1518,7 @@ p.copy {
     margin: 0px;
     padding-bottom: 0rem;
     min-height: 50rem;
-    max-height: 70rem;
+    /*max-height: 70rem;*/
     height: auto;
     background: white;
     position: relative;
@@ -1656,10 +1672,7 @@ h3.bag {
 .highlight {
     color: #da2d2d;
 }
-.space {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
+
 a.btn {
     margin: 0 10px 0 0;
 }
@@ -1713,4 +1726,7 @@ p.download {
     line-height: 1.625em;
     font-weight: 300;
     font-size: 1.1em;
+}
+#about{
+    height: auto;
 }
