@@ -27,18 +27,24 @@
     <script type="text/javascript" src="scripts/jquery.cookie.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            var item = {chromiumStandard:476, chromiumFullColor:497, goldStandard:486,goldFullColor:507,cloth:20,liquid:30};
+            var item = {
+                chromiumStandard:476,
+                chromiumFullColor:497,
+                goldStandard:486,
+                goldFullColor:507,
+                cloth:20,
+                liquid:30
+            };
+            var names = {
+                chromiumStandard:"Chromium Standard",
+                ChromiumFullColor:"Chromium Full Spectrum",
+                goldStandard: "Gold Standard",
+                goldFullColor: "Gold Full Spectrum",
+                cloth: "Cloth",
+                liquid: "Liquid"
+            };
 
-            //setup form price
-            $('[name="amount_1"]').val(item.chromiumStandard);
-            $('[name="amount_2"]').val(item.chromiumFullColor);
-            $('[name="amount_3"]').val(item.goldStandard);
-            $('[name="amount_4"]').val(item.goldFullColor);
-            $('[name="amount_5"]').val(item.liquid);
-            $('[name="amount_6"]').val(item.cloth);
-
-
-            var totalprice= 0,subtotal= 0,empty=false;
+            var totalprice= 0,subtotal= 0,empty=false, itemno=1;
             for (var key in item) {
                 if($.cookie(key) != null){
                     $('#'+key).show();
@@ -46,6 +52,13 @@
                     $('#'+key+'Qty').val($.cookie(key));
                     totalprice += parseInt($.cookie(key))*item[key];
                     $('#'+key+'TotalPrice').text("S$"+parseFloat(parseInt($.cookie(key))*item[key]).toFixed(2));
+
+                    //paypal
+                    $('#'+key).append('<input type="hidden" name="item_name_'+itemno+'" value="'+names[key]+'">');
+                    $('#'+key+'Qty').attr({name:"quantity_"+itemno});
+                    $('#'+key).append('<input type="hidden" name="amount_'+itemno+'" value="'+parseFloat(item[key]).toFixed(2)+'">');
+
+                    itemno++;
                     empty=true;
                 }
             }
@@ -109,7 +122,8 @@
     <form id="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <input type="hidden" name="cmd" value="_cart">
         <input type="hidden" name="upload" value="1">
-        <input type="hidden" name="business" value="seller@dezignerfotos.com">
+        <input type="hidden" name="business" value="payment@airbud.com">
+        <input type="hidden" name="currency_code" value="SGD">
         <div id="cart">
             <div id="cart-progressbar">
                 <div id="progressbar-container">
@@ -144,9 +158,7 @@
                             <p id="chromiumStandardPrice"></p>
                         </div>
                         <div class="cart-item-qty float_left">
-                            <input type="hidden" name="item_name_1" value="Chromium Standard">
-                            <input id="chromiumStandardQty" name="quantity_1" type="text" value="" class="cart-item-input"/>
-                            <input type="hidden" name="amount_1" value="">
+                            <input id="chromiumStandardQty" type="text" value="" class="cart-item-input"/>
                         </div>
                         <div class="cart-item-price float_left">
                             <p id="chromiumStandardTotalPrice"></p>
@@ -172,9 +184,7 @@
                             <p id="chromiumFullColorPrice"></p>
                         </div>
                         <div class="cart-item-qty float_left">
-                            <input type="hidden" name="item_name_2" value="Chromium Full Spectrum">
-                            <input id="chromiumFullColorQty" name="quantity_2" type="text" value="" class="cart-item-input"/>
-                            <input type="hidden" name="amount_2" value="">
+                            <input id="chromiumFullColorQty" type="text" value="" class="cart-item-input"/>
                         </div>
                         <div class="cart-item-price float_left">
                             <p id="chromiumFullColorTotalPrice"></p>
@@ -200,9 +210,7 @@
                             <p id="goldStandardPrice"></p>
                         </div>
                         <div class="cart-item-qty float_left">
-                            <input type="hidden" name="item_name_3" value="Gold Standard">
-                            <input id="goldStandardQty" name="quantity_3" type="text" value="" class="cart-item-input"/>
-                            <input type="hidden" name="amount_3" value="">
+                            <input id="goldStandardQty" type="text" value="" class="cart-item-input"/>
                         </div>
                         <div class="cart-item-price float_left">
                             <p id="goldStandardTotalPrice"></p>
@@ -228,9 +236,7 @@
                             <p id="goldFullColorPrice"></p>
                         </div>
                         <div class="cart-item-qty float_left">
-                            <input type="hidden" name="item_name_4" value="Gold Full Spectrum">
-                            <input id="goldFullColorQty" name="quantity_4" type="text" value="" class="cart-item-input"/>
-                            <input type="hidden" name="amount_4" value="">
+                            <input id="goldFullColorQty" type="text" value="" class="cart-item-input"/>
                         </div>
                         <div class="cart-item-price float_left">
                             <p id="goldFullColorTotalPrice"></p>
@@ -256,9 +262,7 @@
                             <p id="clothPrice"></p>
                         </div>
                         <div class="cart-item-qty float_left">
-                            <input type="hidden" name="item_name_5" value="Cloth">
-                            <input id="clothQty" name="quantity_5" type="text" value="" class="cart-item-input"/>
-                            <input type="hidden" name="amount_5" value="">
+                            <input id="clothQty" type="text" value="" class="cart-item-input"/>
                         </div>
                         <div class="cart-item-price float_left">
                             <p id="clothTotalPrice"></p>
@@ -284,9 +288,7 @@
                             <p id="liquidPrice"></p>
                         </div>
                         <div class="cart-item-qty float_left">
-                            <input type="hidden" name="item_name_6" value="Liquid">
-                            <input id="liquidQty" name="quantity_6" type="text" value="" class="cart-item-input"/>
-                            <input type="hidden" name="amount_6" value="">
+                            <input id="liquidQty" type="text" value="" class="cart-item-input"/>
                         </div>
                         <div class="cart-item-price float_left">
                             <p id="liquidTotalPrice"></p>
