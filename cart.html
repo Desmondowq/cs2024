@@ -28,20 +28,20 @@
     <script type="text/javascript">
         $(document).ready(function(){
             var item = {
-                chromiumStandard:476,
-                chromiumFullColor:497,
-                goldStandard:486,
-                goldFullColor:507,
-                cloth:20,
-                liquid:30
+                chromiumBasic:476,
+                chromiumFullSpectrum:497,
+                goldBasic:486,
+                goldFullSpectrum:507,
+                capsule:80,
+                case:20
             };
             var names = {
-                chromiumStandard:"Chromium Standard",
-                ChromiumFullColor:"Chromium Full Spectrum",
-                goldStandard: "Gold Standard",
-                goldFullColor: "Gold Full Spectrum",
-                cloth: "Cloth",
-                liquid: "Liquid"
+                chromiumBasic:"Chromium Basic",
+                ChromiumFullSpectrum:"Chromium Full Spectrum",
+                goldBasic: "Gold Basic",
+                goldFullSpectrum: "Gold Full Spectrum",
+                capsule: "Aluminium Capsule",
+                case: "Sports Carrying Case"
             };
 
             var totalprice= 0,subtotal= 0,empty=false, itemno=1;
@@ -63,7 +63,11 @@
                 }
             }
             if(empty == false){
-                window.location = "index.html";
+                $('#myModal .modal-body').html("Shopping Cart Empty, redirecting to home page...");
+                $('#myModal').modal('show');
+                setTimeout(function(){
+                    window.location = "index.html";
+                },2000);
             }
             subtotal = totalprice;
             $("#subtotal").text("S$"+parseFloat(subtotal).toFixed(2));
@@ -82,7 +86,7 @@
                 $.removeCookie(name);
                 window.location = "cart.html";
             });
-            $("#cart-checkout").click(function(){
+            $("#btn-checkout").click(function(){
                 for (var key in item) {
                     $.removeCookie(key);
                     $.removeCookie('totalPrice');
@@ -142,164 +146,163 @@
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
-            <hr>
             <div id="cart-container">
                 <div id="cart-title">
                     <p>In Your Cart</p>
                     <hr>
                 </div>
-                <div class="cart-item" id="chromiumStandard">
+                <div class="cart-item" id="chromiumBasic">
                     <div class="cart-image float_left">
-                        <img src="" width="110" height="78">
+                        <img src="images/cart-chrome.jpg">
                     </div>
                     <div class="cart-description float_left">
                         <div class="cart-item-title float_left">
-                            <h4><b>CHROMIUM & Standard Color Wire</b></h4>
+                            <h4><b>CHROMIUM Finish & Basic Color Wire</b></h4>
                         </div>
                         <div class="cart-item-price-per float_left">
-                            <p id="chromiumStandardPrice"></p>
+                            <p id="chromiumBasicPrice"></p>
                         </div>
                         <div class="cart-item-qty float_left">
-                            <input id="chromiumStandardQty" type="text" value="" class="cart-item-input"/>
+                            <input id="chromiumBasicQty" type="text" value="" class="cart-item-input"/>
                         </div>
                         <div class="cart-item-price float_left">
-                            <p id="chromiumStandardTotalPrice"></p>
+                            <p id="chromiumBasicTotalPrice"></p>
                         </div>
                         <div class="clearfix"></div>
                         <hr>
                     </div>
                     <div class="float_right">
-                        <a href="#" id="chromiumStandardRemove" class="remove-cart-item">Remove</a>
+                        <a href="#" id="chromiumBasicRemove" class="remove-cart-item"><i class="fa fa-times"></i> Remove</a>
                     </div>
                     <div class="clearfix"></div>
                     <hr>
                 </div>
-                <div class="cart-item" id="chromiumFullColor">
+                <div class="cart-item" id="chromiumFullSpectrum">
                     <div class="cart-image float_left">
-                        <img src="" width="110" height="78">
+                        <img src="images/cart-chrome-full.jpg">
                     </div>
                     <div class="cart-description float_left">
                         <div class="cart-item-title float_left">
-                            <h4><b>CHROMIUM & Epic Color Wire</b></h4>
+                            <h4><b>CHROMIUM Finish & Full Spectrum Wire</b></h4>
                         </div>
                         <div class="cart-item-price-per float_left">
-                            <p id="chromiumFullColorPrice"></p>
+                            <p id="chromiumFullSpectrumPrice"></p>
                         </div>
                         <div class="cart-item-qty float_left">
-                            <input id="chromiumFullColorQty" type="text" value="" class="cart-item-input"/>
+                            <input id="chromiumFullSpectrumQty" type="text" value="" class="cart-item-input"/>
                         </div>
                         <div class="cart-item-price float_left">
-                            <p id="chromiumFullColorTotalPrice"></p>
+                            <p id="chromiumFullSpectrumTotalPrice"></p>
                         </div>
                         <div class="clearfix"></div>
                         <hr>
                     </div>
                     <div class="float_right">
-                        <a href="#" id="chromiumFullColorRemove" class="remove-cart-item">Remove</a>
+                        <a href="#" id="chromiumFullSpectrumRemove" class="remove-cart-item"><i class="fa fa-times"></i> Remove</a>
                     </div>
                     <div class="clearfix"></div>
                     <hr>
                 </div>
-                <div class="cart-item" id="goldStandard">
+                <div class="cart-item" id="goldBasic">
                     <div class="cart-image float_left">
-                        <img src="" width="110" height="78">
+                        <img src="images/cart-gold.jpg">
                     </div>
                     <div class="cart-description float_left">
                         <div class="cart-item-title float_left">
-                            <h4><b>Gold & Standard Wire</b></h4>
+                            <h4><b>Gold Finish & Basic Wire</b></h4>
                         </div>
                         <div class="cart-item-price-per float_left">
-                            <p id="goldStandardPrice"></p>
+                            <p id="goldBasicPrice"></p>
                         </div>
                         <div class="cart-item-qty float_left">
-                            <input id="goldStandardQty" type="text" value="" class="cart-item-input"/>
+                            <input id="goldBasicQty" type="text" value="" class="cart-item-input"/>
                         </div>
                         <div class="cart-item-price float_left">
-                            <p id="goldStandardTotalPrice"></p>
+                            <p id="goldBasicTotalPrice"></p>
                         </div>
                         <div class="clearfix"></div>
                         <hr>
                     </div>
                     <div class="float_right">
-                        <a href="#" id="goldStandardRemove" class="remove-cart-item">Remove</a>
+                        <a href="#" id="goldBasicRemove" class="remove-cart-item"> <i class="fa fa-times"></i>Remove</a>
                     </div>
                     <div class="clearfix"></div>
                     <hr>
                 </div>
-                <div class="cart-item" id="goldFullColor">
+                <div class="cart-item" id="goldFullSpectrum">
                     <div class="cart-image float_left">
-                        <img src="" width="110" height="78">
+                        <img src="images/cart-gold-full.jpg">
                     </div>
                     <div class="cart-description float_left">
                         <div class="cart-item-title float_left">
-                            <h4><b>Gold & Epic Color wire</b></h4>
+                            <h4><b>Gold Finish & Full Spectrum wire</b></h4>
                         </div>
                         <div class="cart-item-price-per float_left">
-                            <p id="goldFullColorPrice"></p>
+                            <p id="goldFullSpectrumPrice"></p>
                         </div>
                         <div class="cart-item-qty float_left">
-                            <input id="goldFullColorQty" type="text" value="" class="cart-item-input"/>
+                            <input id="goldFullSpectrumQty" type="text" value="" class="cart-item-input"/>
                         </div>
                         <div class="cart-item-price float_left">
-                            <p id="goldFullColorTotalPrice"></p>
+                            <p id="goldFullSpectrumTotalPrice"></p>
                         </div>
                         <div class="clearfix"></div>
                         <hr>
                     </div>
                     <div class="float_right">
-                        <a href="#" id="goldFullColorRemove" class="remove-cart-item">Remove</a>
+                        <a href="#" id="goldFullSpectrumRemove" class="remove-cart-item"><i class="fa fa-times"></i> Remove</a>
                     </div>
                     <div class="clearfix"></div>
                     <hr>
                 </div>
-                <div class="cart-item" id="cloth">
+                <div class="cart-item" id="capsule">
                     <div class="cart-image float_left">
-                        <img src="" width="110" height="78">
+                        <img src="images/cart-capsule.png">
                     </div>
                     <div class="cart-description float_left">
                         <div class="cart-item-title float_left">
-                            <h4><b>Cloth</b></h4>
+                            <h4><b>Aluminium Capsule</b></h4>
                         </div>
                         <div class="cart-item-price-per float_left">
-                            <p id="clothPrice"></p>
+                            <p id="capsulePrice"></p>
                         </div>
                         <div class="cart-item-qty float_left">
-                            <input id="clothQty" type="text" value="" class="cart-item-input"/>
+                            <input id="capsuleQty" type="text" value="" class="cart-item-input"/>
                         </div>
                         <div class="cart-item-price float_left">
-                            <p id="clothTotalPrice"></p>
+                            <p id="capsuleTotalPrice"></p>
                         </div>
                         <div class="clearfix"></div>
                         <hr>
                     </div>
                     <div class="float_right">
-                        <a href="#" id="clothRemove" class="remove-cart-item">Remove</a>
+                        <a href="#" id="capsuleRemove" class="remove-cart-item"><i class="fa fa-times"></i> Remove</a>
                     </div>
                     <div class="clearfix"></div>
                     <hr>
                 </div>
-                <div class="cart-item" id="liquid">
+                <div class="cart-item" id="case">
                     <div class="cart-image float_left">
-                        <img src="" width="110" height="78">
+                        <img src="images/cart-case.jpg">
                     </div>
                     <div class="cart-description float_left">
                         <div class="cart-item-title float_left">
-                            <h4><b>Liquid Solution</b></h4>
+                            <h4><b>Sports Carrying Case</b></h4>
                         </div>
                         <div class="cart-item-price-per float_left">
-                            <p id="liquidPrice"></p>
+                            <p id="casePrice"></p>
                         </div>
                         <div class="cart-item-qty float_left">
-                            <input id="liquidQty" type="text" value="" class="cart-item-input"/>
+                            <input id="caseQty" type="text" value="" class="cart-item-input"/>
                         </div>
                         <div class="cart-item-price float_left">
-                            <p id="liquidTotalPrice"></p>
+                            <p id="caseTotalPrice"></p>
                         </div>
                         <div class="clearfix"></div>
                         <hr>
                     </div>
                     <div class="float_right">
-                        <a href="#" id="liquidRemove" class="remove-cart-item">Remove</a>
+                        <a href="#" id="caseRemove" class="remove-cart-item"><i class="fa fa-times"></i> Remove</a>
                     </div>
                     <div class="clearfix"></div>
                     <hr>
@@ -307,19 +310,19 @@
                 <div id="total-cart-content" >
                     <table class="float_right">
                         <tr>
-                            <td width="120" align="right">Cart subtotal</td>
-                            <td width="100" align="center" id="subtotal"></td>
+                            <td width="120" align="right">Cart Subtotal:</td>
+                            <td width="100" align="right" id="subtotal"></td>
                         </tr>
                         <tr>
-                            <td align="right">Free Delivery</td>
-                            <td align="center">$0.00</td>
+                            <td align="right">Free Delivery:</td>
+                            <td align="right">$0.00</td>
                         </tr>
                         <tr>
-                            <td align="right">Total</td>
-                            <td align="center" id="totalprice"></td>
+                            <td align="right">Total:</td>
+                            <td align="right" id="totalprice"></td>
                         </tr>
                         <tr>
-                            <td colspan="2" align="center">GST included</td>
+                            <td colspan="2" align="right">GST included</td>
                         </tr>
                     </table>
                     <div class="clearfix"></div>
@@ -328,12 +331,12 @@
                 <div class="clearfix"></div>
                 <div id="cart-total">
                     <button class="white-btn"><a href="buynow.html">Continue Shopping</a></button>
-                    <button type="button" id="cart-checkout">Checkout</button>
+                    <button type="button" id="btn-checkout" class="checkout-page">Checkout</button>
                 </div>
             </div>
         </div>
     </form>
-    <div id="cart-faq">
+   <!-- <div id="cart-faq">
         <div>
             <h3><b>Question</b></h3>
         </div>
@@ -343,7 +346,7 @@
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         <h4>What is Lorem Ipsum</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </div>
+    </div>-->
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
