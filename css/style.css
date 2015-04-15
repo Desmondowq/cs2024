@@ -1497,3 +1497,224 @@ footer .footer .form-control:focus {
 p.copy {
     margin-left: 20px;
 }
+/*------Whats In the Bag--------*/
+#overview {
+    margin: 0px;
+    padding-top: 6.5rem;
+    padding-bottom: 0rem;
+    min-height: 50rem;
+    max-height: 70rem;
+    height: auto;
+    background: white;
+    position: relative;
+    display: block;
+    z-index: 20;
+    text-align: left;
+    overflow: hidden;
+}
+h2 {
+    font-size: 2.5rem;
+    line-height: 3.6rem;
+    margin-bottom: 1.7rem;
+    font-weight: 200;
+}
+.content-left {
+    text-align: right;
+    padding-right: 2rem;
+    padding-bottom: 6.5rem;
+}
+.overview {
+    margin-top: 3.25rem;
+}
+i.fa-3x {
+    font-size: 3em;
+}
+h4.overview {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.625rem;
+}
+
+/*--------Whats In the Bag---------*/
+.section-wrapper {
+    padding-top: 80px;
+    background: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+.section-title {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.section-title .title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    color: #25292c;
+}
+.section-title .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 28px;
+    margin-top: 0;
+    color: #999;
+}
+.main-color {
+    color: #4cddf3;
+}
+.title-break {
+    border-top: 3px solid #CCC;
+    width: 80px;
+    margin: 40px auto 50px auto;
+    display: inline-block;
+}
+i.fa-5x {
+    font-size: 3.5em;
+}
+.delay.one {
+    animation-delay: 0.15s;
+    -o-animation-delay: 0.15s;
+    -moz-animation-delay: 0.15s;
+    -webkit-animation-delay: 0.15s;
+}
+.delay.two {
+    animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+}
+.spacer.big {
+    height: 100px;
+}
+.spacer {
+    display: block;
+    width: 100%;
+}
+.white {
+    color: #FFF !important;
+}
+.bg-parallax {
+    background-size: cover !important;
+    -moz-background-size: cover !important;
+    -webkit-background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center 100%!important;
+}
+.spacer.medium {
+    height: 50px;
+}
+.fill-wrapper {
+    padding: 100px 0;
+}
+.btn-outline {
+    padding: 10px 15px;
+    border: 1px solid #FFF;
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.btn-outline:hover {
+    text-decoration: none;
+    background: #25292c;
+    border-color: #25292c;
+}
+h3.bag {
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+}
+/*------------Download--------------*/
+#download {
+    margin: 0px;
+    padding-top: 4.25rem;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    z-index: 20;
+    text-align: left;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.padding-left {
+    padding-left: 90px;
+}
+.highlight {
+    color: #da2d2d;
+}
+.space {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+a.btn {
+    margin: 0 10px 0 0;
+}
+.btn-download {
+    color: #ffffff;
+    background-color: #494C53;
+    padding: 15px 25px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn-download:hover {
+    color: #ffffff;
+    background-color: #2f3238;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+i.fa.fa-2x {
+    vertical-align: middle;
+    padding: 0 6px;
+    font-size: 1.7em;
+}
+.fa-2x {
+    font-size: 2em;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.pull-right {
+    float: right;
+}
+.bounceInRight {
+    -webkit-animation-name: bounceInRight;
+    animation-name: bounceInRight;
+}
+h2.download {
+    font-size: 2.32em;
+    line-height: 3.6rem;
+    font-weight: 100;
+    margin-bottom: 1.7rem;
+}
+p.download {
+    line-height: 1.625em;
+    font-weight: 300;
+    font-size: 1.1em;
+}
