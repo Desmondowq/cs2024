@@ -287,7 +287,7 @@ nav{
 /*for mobile*/
 @media(max-width: 767px){
     .bg{
-          background-attachment: inherit;
+        background-attachment: inherit;
     }
     .navbar-right{
         /* margin-right:10%; */
@@ -344,9 +344,9 @@ nav{
         width: 100% !important;
 
         float: none !important;
-    
+
         margin-top: 50px !important;
-}
+    }
     .right-container{
         width: 100% !important;
 
@@ -362,34 +362,34 @@ nav{
         width:100%;
     }
     #airbud-setup .left-sidebar {
-      width:100%;
+        width:100%;
     }
     h4.selectfinish {
-      width: 352px;
-      margin: 0 auto;
-      margin-bottom: 10px;
+        width: 352px;
+        margin: 0 auto;
+        margin-bottom: 10px;
     }
     h4.selectwire {
-      width: 352px;
-      margin: 0 auto;
-      margin-top:20px;
-      margin-bottom: 10px;
+        width: 352px;
+        margin: 0 auto;
+        margin-top:20px;
+        margin-bottom: 10px;
     }
     h3.deliverynote {
-      width: 352px;
-      margin: 0 auto !important;
-      margin-top: 5px !important;
+        width: 352px;
+        margin: 0 auto !important;
+        margin-top: 5px !important;
     }
     #price{
-      width: 352px;
-      margin: 0 auto !important;
-    
-      margin-top: 20px !important;
-      margin-bottom: 10px !important;
+        width: 352px;
+        margin: 0 auto !important;
+
+        margin-top: 20px !important;
+        margin-bottom: 10px !important;
     }
     .buybox{
         width: 333px;
-      margin: 0 auto !important;
+        margin: 0 auto !important;
     }
     .tech-spec-col1 {
         width: 20% !important;
@@ -410,9 +410,9 @@ nav{
     }
     #chargingwire{
         width: 100% !important;
-    
+
         margin-top: 45px;
-}
+    }
 }
 .navbar-right li{
     font-size: 1.35em;
@@ -575,7 +575,7 @@ nav{
 }
 #twoearbuds .description{
     margin: 0 auto;
-    
+
     float: none;
 }
 .right-container h3{
@@ -903,7 +903,7 @@ video::-webkit-media-controls {
     /*padding: 5px 0;*/
 }
 /*#owl-demo .item{*/
-    /*margin: 3px;*/
+/*margin: 3px;*/
 /*}*/
 #owl-demo .item img{
     display: block;
@@ -1644,6 +1644,7 @@ h3.bag {
     overflow: hidden;
     display: block;
     z-index: 20;
+    margin-top: 80px;
     text-align: left;
 }
 .row {
