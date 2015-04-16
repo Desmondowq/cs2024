@@ -293,6 +293,10 @@ nav{
     .bg {
         background-attachment: inherit;
     }
+    #app-img{
+    background-position: 0% 0%;
+        
+    }
 
     .navbar-right {
         /* margin-right:10%; */
@@ -464,9 +468,42 @@ nav{
     #download-apple-store{
         margin: 0;
     }
-     #download-play-store {
-         margin:10px 0 0 0;
-     }
+    #download-play-store {
+        margin:10px 0 0 0;
+    }
+    .cart-item-title {
+        float: none;
+    }
+    .cart-image {
+        float:none;
+    }
+    .cart-item-price-per {
+      margin: 10px 0 0 0 !important;
+    }
+    .cart-item-price {
+      margin-left: 0px !important;
+      position: absolute;
+      right: 20px;
+    }
+    .navbar-default .navbar-nav>li>a:focus{
+        color:#fff;
+    }
+    #acc-price-container #btn-checkout {
+        margin-right: 40px;
+    }
+    .accessories-item{
+        margin-top: 40px;
+    }
+    .checkout-wrap{
+        margin: 0 !important;
+    }
+    #cart-progressbar{
+    padding-bottom: 4px !important;
+        
+    }
+    .cart-description {
+    width: 320px !important;
+    }
 }
 .navbar-right li{
     font-size: 1.35em;
@@ -804,6 +841,7 @@ a.active .option-text{
     width: 322px;
     background-image: none;
     text-shadow: none;
+    transition: all 400ms;
 }
 #pay .btn{
     width:90%;
@@ -815,8 +853,10 @@ a.active .option-text{
     color: #D7EFFF;
 }
 #pay:hover{
-    background-color: #3388BF;
+    background-color: #2A87CA;
     color: #fff;
+    border-color: #fff;
+    transition: all 400ms;
 }
 .container{
     min-width: 320px;
@@ -1026,6 +1066,12 @@ ul.checkout-bar li {
     position: relative;
     text-transform: uppercase;
 }
+ul.checkout-bar li a{
+    color: #ccc !important;
+}
+ul.checkout-bar li a:hover{
+    color: #5BB4DF !important;
+}
 ul.checkout-bar li:before {
     /* -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2); */
     /* box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2); */
@@ -1036,7 +1082,7 @@ ul.checkout-bar li:before {
     font-size: 14px;
     font-weight: 300;
     left: 20px;
-    line-height: 26px;
+    line-height: 29px;
     height: 30px;
     position: absolute;
     text-align: center;
@@ -1045,8 +1091,8 @@ ul.checkout-bar li:before {
     width: 30px;
     z-index: 9;
 }
-ul.checkout-bar li.active,ul.checkout-bar li.last {
-    color: #0F91D1;
+ul.checkout-bar li.active a,ul.checkout-bar li.last a{
+    color: #0F91D1 !important;
     /* font-weight: bold; */
 }
 ul.checkout-bar li.active:before, ul.checkout-bar li.last:before {
@@ -1056,10 +1102,15 @@ ul.checkout-bar li.active:before, ul.checkout-bar li.last:before {
     border-width: 1px;
     border-color: #FFFFFF;
 }
-ul.checkout-bar li.visited {
-    background: #ECECEC;
-    color: #74787A;
+ul.checkout-bar li.visited a{
+    background: none;
+    color: #74787A !important;
     z-index: 999;
+    transition: all 400ms;
+}
+ul.checkout-bar li.visited a:hover{
+    color: #48ABDC !important;
+    transition: all 400ms;
 }
 ul.checkout-bar li.visited:before {
     background: #FFFFFF;
@@ -1079,7 +1130,7 @@ ul.checkout-bar li:nth-child(3):before {
 ul.checkout-bar a {
     color: #57aed1;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 300;
     text-decoration: none;
 }
 
@@ -1148,9 +1199,9 @@ ul.checkout-bar a {
         top: -61px;
         width: 30px;
         z-index: 0;
-    
+
         color: #A2A2A2;
-}
+    }
     ul.checkout-bar li.visited {
         background: none;
     }
@@ -1209,7 +1260,7 @@ ul.checkout-bar a {
 #acc-price{
     position: fixed;
     bottom: 0;
-    /*padding-right: 30px;*/
+    /* padding-right: 30px; */
     width: 100%;
     background-color: #ffffff;
     border-top: 1px solid #CCCCCC;
@@ -1227,7 +1278,7 @@ ul.checkout-bar a {
 }
 @media(max-width:676px){
     .accessories-description,.accessories-image{
-        width: 364px;
+        width: 343px;
         padding: 8px;
         float: none;
     }
@@ -1238,10 +1289,10 @@ ul.checkout-bar a {
 
 
 #btn-checkout,#cart-checkout {
-    border: 1px solid #FFFFFF;    
-    border-radius: 0.3em;    
-    padding: 5px 10px 5px 10px;    
-    font-size: 1em;    font-family: Abel, sans-serif;    
+    border: 1px solid #FFFFFF;
+    border-radius: 0.3em;
+    padding: 5px 10px 5px 10px;
+    font-size: 1em;    font-family: Abel, sans-serif;
     background: #0F91D1;    transition: all 500ms;
     /*background: #00be06;
     background-image: -webkit-linear-gradient(top, #00be06, #039403);
