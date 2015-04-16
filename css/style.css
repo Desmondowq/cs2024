@@ -453,7 +453,7 @@ nav{
         text-align: left;
     }
 
-    #download-content {
+    #sportsCase-content {
         padding: 15px;
     }
 
@@ -461,9 +461,12 @@ nav{
         padding: 20px;
     }
 
-    #download-apple-store, #download-play-store {
+    #download-apple-store{
         margin: 0;
     }
+     #download-play-store {
+         margin:10px 0 0 0;
+     }
 }
 .navbar-right li{
     font-size: 1.35em;
@@ -730,7 +733,7 @@ nav{
         float:left;
     }
     .container{
-        width: 960px;
+        /* width: 960px; */
     }
 }
 @media (max-width:1301px) {
@@ -1345,6 +1348,9 @@ ul.checkout-bar a {
     margin-right: 37px;
     width: 150px;
 }
+.cart-image img{
+    width:150px;
+}
 .cart-image-access{
     width:300px;
 }
@@ -1450,12 +1456,13 @@ footer.footer #footer {
     background-color: #1c1c1c;
     margin-top: 20px;
     clear: both;
+    overflow-y: hidden;
 }
 .footer .row {
     margin-left: 0;
     margin-right: 0;
     font-weight: 400;
-    padding-left: 90px;
+    /* padding-left: 90px; */
 }
 .footer-text h4 {
     /* color: #03CCFF; */
@@ -1600,9 +1607,11 @@ footer .footer .form-control:focus {
     font-weight: normal;
     letter-spacing: 0.2em;
     border-top: 1px solid rgba(114, 114, 114, 0.25);
+    overflow-x: hidden;
 }
 p.copy {
     margin-left: 20px;
+    color: #B5B5B5;
 }
 /*------Whats In the Bag--------*/
 #overview {
@@ -1633,7 +1642,8 @@ h2 {
     margin-top: 3.25rem;
 }
 i.fa-3x {
-    font-size: 3em;
+    font-size: 2.4em;
+    color: #494C53;
 }
 h4.overview {
     font-family: 'Open Sans Condensed', sans-serif;
@@ -1664,7 +1674,7 @@ h4.overview {
 }
 .section-title .subtitle {
     margin-top: 0;
-    color: #084177;
+    color: #4F4F4F;
     line-height: 1.625em;   font-weight: 300;   font-size: 1.1em;
 }
 .main-color {
@@ -1678,6 +1688,7 @@ h4.overview {
 }
 i.fa-5x {
     font-size: 3.5em;
+    color: #666161;
 }
 .delay.one {
     animation-delay: 0.15s;
@@ -1730,9 +1741,9 @@ i.fa-5x {
     border-color: #25292c;
 }
 h3.bag {
-    font-size: 1.3em;
+    font-size: 1.8em;
     font-family: 'Open Sans Condensed', sans-serif;
-    color: #da2d2d;
+    color: #717171;
 }
 #designws {
     margin-top: 50px;
@@ -1742,9 +1753,10 @@ h3.bag {
 .awrd-color {
     color: #158AD2;
 }
-/*------------Download--------------*/
-#download {
+/*------------SportsCase--------------*/
+#sportsCase {
     margin: 0px;
+    margin-bottom: 40px;
     padding-top: 4.25rem;
     background: white;
     position: relative;
@@ -1762,7 +1774,7 @@ h3.bag {
     padding-left: 90px;
 }
 .highlight {
-    color: #da2d2d;
+    color: #2A87CA;
 }
 
 a.btn {
@@ -1814,11 +1826,15 @@ h2.download {
     font-family: 'Open Sans Condensed', sans-serif;
     margin-bottom: 1.7rem;
 }
-p.download {
+p.sportsCase {
     line-height: 1.625em;
     font-weight: 300;
     font-size: 1.1em;
 }
 #about{
     height: auto;
+}
+.casing-img img{
+    width:100%;
+    max-width:500px;
 }
