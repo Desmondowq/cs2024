@@ -258,11 +258,11 @@ video{
     background-size: 50px 50px;
 }
 #logo{
-    opacity: 0;
-    -moz-animation: fadein 1s ease-in 4s forwards; /* Firefox */
-    -webkit-animation: fadein 1s ease-in 4s forwards; /* Safari and Chrome */
-    -o-animation: fadein 1s ease-in 4s forwards; /* Opera */
-    animation: fadein 1s ease-in 4s forwards;
+    /* opacity: 0; */
+    /*-moz-animation: fadein 1s ease-in 4s forwards; *//* Firefox */
+    /*-webkit-animation: fadein 1s ease-in 4s forwards; *//* Safari and Chrome */
+    /*-o-animation: fadein 1s ease-in 4s forwards; *//* Opera */
+    /*animation: fadein 1s ease-in 4s forwards;*/
     margin-left: 90px;
 }
 #arrow-bounce{
@@ -502,7 +502,10 @@ nav{
         
     }
     .cart-description {
-    width: 320px !important;
+        width: 320px !important;
+    }
+    .cart-item {
+      width: 100% !important;
     }
 }
 .navbar-right li{
@@ -1374,8 +1377,8 @@ ul.checkout-bar a {
     background-image: linear-gradient(to bottom, #ffc801, #fffe03);
     text-decoration: none;*/
     border-color: #0F91D2;
-    color: #0F91D2;
-    background-color: #143D52;
+    color: #FFFFFF;
+    background-color: #46AFE5;
     transition: all 500ms;
 }
 #animate_block{
@@ -1482,7 +1485,7 @@ h1.sound {
 }
 
 p.sou {
-    color: #797979;
+    color: #A8A8A8;
     line-height: 16pt;
 }
 .modal-alert {
