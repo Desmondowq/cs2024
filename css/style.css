@@ -1402,6 +1402,9 @@ ul.checkout-bar a {
     margin-right: 37px;
     width: 150px;
 }
+.cart-image img{
+    width:150px;
+}
 .cart-image-access{
     width:300px;
 }
@@ -1884,10 +1887,6 @@ p.sportsCase {
 }
 #about{
     height: auto;
-}
-h4.gettoknow, h4.office{
-    /* font-weight: bold; */
-    
 }
 .casing-img img{
     width:100%;
