@@ -385,11 +385,11 @@ nav{
         width: 100% !important;
     }
 
-    #airbud-setup .left-sidebar img {
+    #earon-setup .left-sidebar img {
         width: 100%;
     }
 
-    #airbud-setup .left-sidebar {
+    #earon-setup .left-sidebar {
         width:100%;
     }
 
@@ -583,7 +583,7 @@ nav{
     /* margin-top: 0; */
     /* clear: both; */
 }
-#airbud-setup,#in-box,#tech-spec{
+#earon-setup,#in-box,#tech-spec{
     margin: 60px 0;
 }
 #tech-spec{
