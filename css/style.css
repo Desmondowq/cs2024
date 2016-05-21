@@ -35,12 +35,12 @@ a:hover{text-decoration: none;color: #005D96;}
 }
 #slide-5{background-color: #151515;height: auto;}
 /*#slide-1 .bg{background:#fff;}*/
-#slide-2 .bg{background-image:url('../images/V3.3.jpg'); }
-#slide-3 .bg{background:none; background-color: #000000;}
+#slide-2 .bg{background-image:url('../images/V3.3.jpg');}
+#slide-3 .bg{background:none; background-color: #1a1a1a;}
 #slide-45 .bg{background:none; background-color:#010101;}
 /*#slide-4 .bg{background-image:url('../images/V2.5.png');}*/
 #slide-5 .bg{
-    background-image: url(../images/V4.2.jpg);
+    background-image: url(../images/v4.5.1.jpg);
 }
 #slide-6 .bg{
     background-image: url(../images/buynow-bg.jpg);
@@ -205,7 +205,10 @@ video{
     font-family: 'Raleway', sans-serif;
     font-size: 2.46em;
 }
-#slide-2 .cell_message, #slide-4 .cell_message{
+#slide-5 .cell_title {
+    color: #333;
+}
+#slide-2 .cell_message, #slide-4 .cell_message, #slide-5 .cell_message{
     color: #515151;
 }
 .cell_message{
@@ -334,7 +337,7 @@ nav{
 
     #slide-2 .bg {
         background-position: 0 110%;
-        background-size: 500px 281px;
+        /* background-size: 500px 281px; */
     }
 
     #dot-nav-bar {
@@ -520,7 +523,8 @@ nav{
 }
 .slide-5-cell-top {
     color: #ffffff;
-    top: 20%; left: 10%;
+    top: 61%;
+    left: 10%;
 }
 .slide-5-cell-btm{
     color: #ffffff;
