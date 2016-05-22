@@ -266,7 +266,7 @@ video{
     /*-webkit-animation: fadein 1s ease-in 4s forwards; *//* Safari and Chrome */
     /*-o-animation: fadein 1s ease-in 4s forwards; *//* Opera */
     /*animation: fadein 1s ease-in 4s forwards;*/
-    margin-left: 90px;
+    margin-left: 58px;
 }
 #arrow-bounce{
     display: block;    text-indent: -9999px;
